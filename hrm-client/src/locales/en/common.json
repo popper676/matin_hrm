@@ -1,0 +1,921 @@
+{
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "edit": "Edit",
+  "close": "Close",
+  "search": "Search",
+  "loading": "Loading...",
+  "noRecords": "No records found",
+  "logout": "Logout",
+  "roles": {
+    "boss": "Boss",
+    "hr_manager": "HR Manager",
+    "general_manager": "Gen. Manager",
+    "finance": "Finance",
+    "employee": "Employee"
+  },
+  "actions": {
+    "add": "Add",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "import": "Import",
+    "details": "Details",
+    "back": "Back",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "view": "View",
+    "edit": "Edit",
+    "delete": "Delete",
+    "approve": "Approve",
+    "reject": "Reject",
+    "saving": "Saving…"
+  },
+  "modal": {
+    "cannotDelete": "Cannot delete",
+    "areYouSure": "Are you sure to delete?",
+    "aboutToDelete": "You are about to delete",
+    "cannotBeUndone": "This action cannot be undone.",
+    "thisItem": "this item",
+    "yesDelete": "Yes, Delete"
+  },
+  "manual": {
+    "OVERVIEW": "OVERVIEW",
+    "EMPLOYEE MANAGEMENT": "EMPLOYEE MANAGEMENT",
+    "ATTENDANCE & LEAVE": "ATTENDANCE & LEAVE",
+    "PAYROLL & PERFORMANCE": "PAYROLL & PERFORMANCE",
+    "ORGANIZATION & OPERATIONS": "ORGANIZATION & OPERATIONS",
+    "WORKFLOWS & HELP": "WORKFLOWS & HELP",
+    "HRM Overview": "HRM Overview",
+    "Dashboard": "Dashboard",
+    "Employees": "Employees",
+    "Employee Details": "Employee Details",
+    "Departments": "Departments",
+    "Positions": "Positions",
+    "Recruitment": "Recruitment",
+    "Onboarding": "Onboarding",
+    "Attendance": "Attendance",
+    "Leave Management": "Leave Management",
+    "Handovers": "Handovers",
+    "Daily SOPs": "Daily SOPs",
+    "Performance Tracker": "Performance Tracker",
+    "Peer Voting": "Peer Voting",
+    "Payroll & KPI": "Payroll & KPI",
+    "Document Vault": "Document Vault",
+    "Birthdays": "Birthdays",
+    "Org Chart": "Org Chart",
+    "Offboarding": "Offboarding",
+    "Complete Employee Lifecycle": "Complete Employee Lifecycle",
+    "Cross-Module Workflow": "Cross-Module Workflow",
+    "Common User Scenarios": "Common User Scenarios",
+    "FAQ / Troubleshooting": "FAQ / Troubleshooting",
+    "Important Notes": "Important Notes",
+    "Employee Portal": "Employee Portal",
+    "Administration": "Administration",
+    "searchPlaceholder": "Search manual...",
+    "addCategory": "+ Add Category",
+    "recycleBin": "Recycle Bin",
+    "selectArticle": "Select an article from the left to view or edit.",
+    "noContent": "No published content yet.",
+    "draftLabel": "(Draft)",
+    "restore": "Restore",
+    "hardDelete": "Hard Delete",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "saveDraft": "Save Draft",
+    "publish": "Publish",
+    "permanentlyDeleteTitle": "Permanently Delete Article?",
+    "moveToRecycleBinTitle": "Move to Recycle Bin?",
+    "aboutToDelete": "You are about to permanently delete",
+    "cannotBeUndone": "This action cannot be undone. The article and its version history will be permanently removed.",
+    "areYouSureMove": "Are you sure you want to move",
+    "toRecycleBin": "to the Recycle Bin?",
+    "canRestoreLater": "You can restore this article later from the Recycle Bin.",
+    "permanentlyDeleteBtn": "Permanently Delete",
+    "moveToRecycleBinBtn": "Move to Recycle Bin",
+    "categoryNamePrompt": "Category name:",
+    "generatingPdf": "Generating PDF…",
+    "pdfDownloaded": "PDF downloaded",
+    "unauthorizedPdf": "You do not have permission to download this PDF",
+    "pdfDownloadError": "Unable to download PDF"
+  },
+  "uyf": {
+    "workspace": "Workspace",
+    "people": "People & organization",
+    "timePay": "Time & compensation",
+    "growth": "Growth & resources",
+    "subtitle": "Your people. One workspace."
+  },
+  "interface": {
+    "workspace": "Workspace",
+    "peopleWorkspace": "People workspace",
+    "selfService": "Employee self-service",
+    "management": "Management console",
+    "overview": "Overview",
+    "people": "People & organization",
+    "time": "Time & attendance",
+    "compensation": "Compensation",
+    "growth": "Growth & lifecycle",
+    "resources": "Resources",
+    "administration": "Administration",
+    "timeAttendance": "Time & attendance",
+    "peopleWork": "People & work",
+    "myProfile": "My profile",
+    "myAttendance": "My attendance",
+    "photoCheckin": "Photo check-in",
+    "qrCheckin": "QR check-in",
+    "myLeaves": "My leaves",
+    "payslips": "Payslips",
+    "myDocuments": "My documents",
+    "myRewards": "My rewards",
+    "myHandovers": "My handovers",
+    "incomingHandover": "Incoming handover",
+    "calculation": "Calculation workspace",
+    "rewardsClaims": "Rewards & claims",
+    "executive": "Executive overview",
+    "assistant": "AI assistant",
+    "kpi": "KPI assignments",
+    "audit": "Audit trail",
+    "announcements": "Announcements",
+    "accounts": "User accounts",
+    "finance": "Finance overview",
+    "myPortal": "My employee portal",
+    "employeeRecords": "Employee records",
+    "departments": "Departments"
+  },
+  "experience": {
+    "home": "My home",
+    "overview": "Overview",
+    "people": "People",
+    "timePay": "Time & pay",
+    "talent": "Talent & growth",
+    "resources": "Resources",
+    "workspace": "WORKSPACE",
+    "workspaces": "Workspaces",
+    "search": "Search",
+    "searchPlaceholder": "Find a page…",
+    "searchHint": "Jump to any page in your workspace.",
+    "findAnything": "Less searching. More doing.",
+    "noResults": "No pages match your search.",
+    "navigate": "Navigate",
+    "open": "Open",
+    "accountReady": "Employee account is ready",
+    "accountHint": "Keep these temporary sign-in details for the employee.",
+    "username": "Username",
+    "temporaryPassword": "Temporary password",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Copy is unavailable. Select and copy the text.",
+    "show": "Show",
+    "hide": "Hide",
+    "nextShift": "Next: finish employee setup by assigning a working shift.",
+    "assignShift": "Assign shift",
+    "profileStep": "Personal details",
+    "workStep": "Work details",
+    "reviewStep": "Review & create",
+    "next": "Continue",
+    "back": "Back",
+    "reviewHint": "Check these details before creating the employee account.",
+    "saving": "Creating account…",
+    "notAssessed": "Not assessed",
+    "allPages": "All pages",
+    "more": "Menu",
+    "help": "Page guide",
+    "close": "Close",
+    "requestLeave": "Request leave",
+    "noRequests": "No leave requests yet",
+    "leaveHint": "Your requests and HR decisions will appear here.",
+    "pending": "Pending",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "submit": "Submit request",
+    "submitting": "Submitting…",
+    "noEmployee": "Your account is not linked to an employee profile.",
+    "noTypes": "HR has not added any leave types yet.",
+    "balance": "Leave balance",
+    "used": "Used",
+    "remaining": "Remaining",
+    "allowance": "Allowance",
+    "reason": "Reason",
+    "from": "From",
+    "to": "To",
+    "attachment": "Attachment",
+    "type": "Leave type",
+    "board": "Board",
+    "list": "List",
+    "searchCandidates": "Search candidates, email or position…",
+    "leaveSubtitle": "Plan time away. Keep track of every request.",
+    "leaveSubmitted": "Leave request submitted to HR",
+    "invalidDates": "The end date must be on or after the start date.",
+    "loadFailed": "We could not load this page. Please try again.",
+    "retry": "Try again",
+    "daysRemaining": "days remaining",
+    "noBalances": "HR has not assigned leave balances for this year yet.",
+    "leaveHistory": "Request history",
+    "filterStatus": "Filter by status",
+    "all": "All",
+    "noMatches": "No matching requests",
+    "approvalHint": "HR will review your request. Your balance changes after approval.",
+    "chooseType": "Choose a leave type",
+    "submitFailed": "Unable to submit. Your details are still here — try again.",
+    "cancel": "Cancel",
+    "todayFocus": "Your day, at a glance",
+    "dailyDescription": "Manage your people and keep the next step in sight.",
+    "needsAttention": "Needs attention",
+    "pendingLeave": "Leave requests to review",
+    "onboardingTasks": "Onboarding in progress",
+    "clearanceTasks": "Offboarding to review",
+    "nothingPending": "Nothing waiting here",
+    "attentionHint": "Open a workspace to review its records.",
+    "startHere": "Make your next move",
+    "teamSnapshot": "Team snapshot",
+    "viewCandidate": "View candidate",
+    "candidate": "Candidate",
+    "stage": "Stage",
+    "position": "Position",
+    "score": "AI score",
+    "searchResults": "matching candidates",
+    "changePhoto": "Change profile photo",
+    "yourWorkspace": "YOUR WORKSPACE",
+    "dailyActions": "Daily actions",
+    "arrivalHint": "Record your arrival or departure",
+    "balanceAndHistory": "View balances and requests",
+    "scanHint": "Scan your office check-in code"
+  },
+  "launcher": {
+    "appsHome": "Apps Home",
+    "hrApps": "HR apps",
+    "hrTitle": "Your HR workspace",
+    "employeeTitle": "My workspace",
+    "hrSubtitle": "Choose an app to get started.",
+    "employeeSubtitle": "Everything you need for your workday.",
+    "hrPortal": "Owner / HR Portal",
+    "employeePortal": "Employee Portal",
+    "allApps": "All apps",
+    "favourites": "Favourites",
+    "filterApps": "Choose apps to display",
+    "search": "Search apps",
+    "searchPlaceholder": "Find an app…",
+    "clearSearch": "Clear search",
+    "moreApps": "More ways to work",
+    "addFavourite": "Add {{app}} to favourites",
+    "removeFavourite": "Remove {{app}} from favourites",
+    "noMatches": "No apps found",
+    "trySearch": "Try an app name, a task, or a workspace.",
+    "noFavourites": "Your favourites start here",
+    "pinHint": "Tap the star beside any app to keep it here for next time.",
+    "browseApps": "Browse all apps",
+    "available": "{{count}} apps in your workspace",
+    "results": "{{count}} matching apps",
+    "storageError": "Favourites are available now, but could not be saved on this device.",
+    "quickNavigation": "Workspace navigation",
+    "checkin": "Check In / Out",
+    "myLeave": "My Leave",
+    "myOverview": "My Overview",
+    "exitSurvey": "Exit Survey",
+    "leave": "Leave",
+    "payroll": "Payroll",
+    "documents": "Documents",
+    "performance": "Performance",
+    "analytics": "Analytics",
+    "personal": "Personal",
+    "people": "People",
+    "time": "Time & pay",
+    "talent": "Talent & growth",
+    "resources": "Resources",
+    "management": "Management",
+    "aboutApp": "About {{app}}",
+    "openApp": "Open {{app}}",
+    "showAll": "Show all apps",
+    "previewHint": "Hover or focus an app to see its details on the right.",
+    "touchHint": "Use an app’s info button to explore its features.",
+    "previewLabel": "Inside this app",
+    "accountMenu": "Account menu",
+    "language": "Language",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode",
+    "notifications": "Notifications",
+    "noNotifications": "No notifications yet.",
+    "markAllRead": "Mark all read",
+    "deleteNotification": "Delete notification",
+    "peopleAccess": "People & Access",
+    "approvalSetup": "Approval Setup",
+    "approvals": "Approvals",
+    "probation": "Probation",
+    "warnings": "Warning letters",
+    "today": "Today",
+    "monthlyReview": "Monthly review",
+    "businesses": "Expense business tags",
+    "reminders": "Reminder settings",
+    "ownerSetup": "Owner setup",
+    "branding": "Branding settings"
+  },
+  "appNotes": {
+    "hr": {
+      "employees": {
+        "summary": "Your people, clearly organised.",
+        "features": [
+          "Search the employee directory",
+          "View employee profiles",
+          "Review work details and assignments"
+        ]
+      },
+      "attendance": {
+        "summary": "Keep working time and attendance in view.",
+        "features": [
+          "Review check-in and check-out records",
+          "Manage shifts and rosters",
+          "Review overtime and shift requests"
+        ]
+      },
+      "leave": {
+        "summary": "Follow every leave request and balance.",
+        "features": [
+          "Review submitted leave requests",
+          "Track approval status",
+          "View leave types and balances"
+        ]
+      },
+      "payroll": {
+        "summary": "Employee pay records in one workspace.",
+        "features": [
+          "Review payroll records",
+          "Manage monthly pay entries",
+          "View KPI and salary details"
+        ]
+      },
+      "recruitment": {
+        "summary": "Move from applicant to new employee.",
+        "features": [
+          "Add and review candidates",
+          "Manage hiring stages and interviews",
+          "Convert a hired candidate to an employee"
+        ]
+      },
+      "onboarding": {
+        "summary": "Give new hires a clear starting point.",
+        "features": [
+          "Review new-hire onboarding",
+          "Track assigned checklist items",
+          "Follow completion progress"
+        ]
+      },
+      "offboarding": {
+        "summary": "Keep employee departures organised.",
+        "features": [
+          "Review offboarding cases",
+          "Track clearance progress",
+          "Follow remaining departure tasks"
+        ]
+      },
+      "documents": {
+        "summary": "Find documents and follow their requests.",
+        "features": [
+          "Browse the document vault",
+          "Track employee document requests",
+          "Follow signatures and approvals"
+        ]
+      },
+      "performance": {
+        "summary": "Understand employee performance over time.",
+        "features": [
+          "Review performance summaries",
+          "Compare department results",
+          "View performance trends"
+        ]
+      },
+      "sops": {
+        "summary": "Keep daily work consistent.",
+        "features": [
+          "Browse SOP templates",
+          "Review execution records",
+          "Track daily completion"
+        ]
+      },
+      "handovers": {
+        "summary": "Keep responsibilities moving smoothly.",
+        "features": [
+          "Review handover records",
+          "Follow checklist progress",
+          "Track outgoing and incoming work"
+        ]
+      },
+      "accounts": {
+        "summary": "Manage access to your HR system.",
+        "features": [
+          "Review user accounts and roles",
+          "Manage account access",
+          "Reset employee sign-in credentials"
+        ]
+      },
+      "analytics": {
+        "summary": "See your HR activity at a glance.",
+        "features": [
+          "View workforce summaries",
+          "Review attendance and leave charts",
+          "Read recent updates and announcements"
+        ]
+      },
+      "departments": {
+        "summary": "Bring your teams into focus.",
+        "features": [
+          "Browse departments",
+          "View department staff",
+          "Review department information"
+        ]
+      },
+      "positions": {
+        "summary": "Keep job roles and hiring needs together.",
+        "features": [
+          "Browse job positions",
+          "View employees in each role",
+          "Review hiring status"
+        ]
+      },
+      "org-chart": {
+        "summary": "See how your team connects.",
+        "features": [
+          "View the organisation chart",
+          "Explore reporting relationships",
+          "Browse departments and team structure"
+        ]
+      },
+      "calculation": {
+        "summary": "Work through monthly payroll calculations.",
+        "features": [
+          "Select a payroll period",
+          "Review calculation settings",
+          "Inspect payroll calculation results"
+        ]
+      },
+      "rewards": {
+        "summary": "Follow employee rewards and claims.",
+        "features": [
+          "Review reward records",
+          "Track employee claims",
+          "Manage request status"
+        ]
+      },
+      "finance": {
+        "summary": "Review the financial side of HR.",
+        "features": [
+          "View finance summaries",
+          "Review payroll totals",
+          "Inspect recent payroll activity"
+        ]
+      },
+      "voting": {
+        "summary": "Review peer feedback across your team.",
+        "features": [
+          "Browse peer-voting records",
+          "Review employee ratings",
+          "Follow submitted feedback"
+        ]
+      },
+      "birthdays": {
+        "summary": "Keep team celebrations on your radar.",
+        "features": [
+          "See upcoming birthdays",
+          "Find employee birthday details",
+          "Browse birthdays by month"
+        ]
+      },
+      "manual": {
+        "summary": "Find guidance for using your HR system.",
+        "features": [
+          "Browse help articles",
+          "Search for instructions",
+          "Read workflow guidance"
+        ]
+      },
+      "announcements": {
+        "summary": "Keep the team informed.",
+        "features": [
+          "Review published announcements",
+          "Prepare team notices",
+          "Manage announcement priority and expiry"
+        ]
+      },
+      "audit": {
+        "summary": "Follow the history of system activity.",
+        "features": [
+          "Browse recorded audit events",
+          "Review who performed an action",
+          "Find activity by date or user"
+        ]
+      },
+      "executive": {
+        "summary": "Review the work that needs executive attention.",
+        "features": [
+          "View executive summaries",
+          "Review pending document approvals",
+          "Follow official document decisions"
+        ]
+      },
+      "assistant": {
+        "summary": "A place for HR-related questions.",
+        "features": [
+          "Start an HR conversation",
+          "Review saved chat sessions",
+          "Continue a previous discussion"
+        ]
+      },
+      "kpi": {
+        "summary": "Keep KPI assignments in one place.",
+        "features": [
+          "Review KPI assignments",
+          "View employee targets",
+          "Follow assigned performance criteria"
+        ]
+      },
+      "my-portal": {
+        "summary": "Open your personal employee workspace.",
+        "features": [
+          "View your employee apps",
+          "Find personal attendance and leave",
+          "Open your linked employee profile"
+        ]
+      },
+      "people-access": {
+        "summary": "Choose apps, actions and employee access.",
+        "features": [
+          "Choose apps, actions and employee access."
+        ]
+      },
+      "approval-setup": {
+        "summary": "Assign each approval stage and its alternate.",
+        "features": [
+          "Assign each approval stage and its alternate."
+        ]
+      },
+      "approvals": {
+        "summary": "Review requests, decisions and payment history.",
+        "features": [
+          "Review requests, decisions and payment history."
+        ]
+      },
+      "probation": {
+        "summary": "Prepare probation evaluations and follow human reviews.",
+        "features": [
+          "Save evaluations and invite employee comments",
+          "Follow Manager, Department Head and HR reviews",
+          "Retain final outcomes, copies and appeals"
+        ]
+      },
+      "warnings": {
+        "summary": "Prepare warning letters, record human approvals and follow up.",
+        "features": [
+          "Supervisor → HR review",
+          "Private HR follow-up"
+        ]
+      },
+      "today": {
+        "summary": "See assigned approvals and permitted follow-ups in one place.",
+        "features": [
+          "Overdue and upcoming work",
+          "Your authorized employee scope"
+        ]
+      },
+      "monthly-review": {
+        "summary": "Compare payroll and review expenses and receipt evidence.",
+        "features": [
+          "Payroll changes and missing records",
+          "Expenses separated by currency"
+        ]
+      },
+      "businesses": {
+        "summary": "Choose the business names employees can select on expense requests.",
+        "features": [
+          "Create or archive expense business tags",
+          "Keep employees and salary organization-wide"
+        ]
+      },
+      "reminders": {
+        "summary": "Choose in-app reminder timing and preview recipients.",
+        "features": [
+          "Permission-aware deadline reminders",
+          "Deduplicated scheduled scans"
+        ]
+      },
+      "owner-setup": {
+        "summary": "Review your businesses, employees, access and policies step by step.",
+        "features": [
+          "Track unfinished steps and settings that need another review."
+        ]
+      },
+      "branding": {
+        "summary": "Manage your shared name, logo, color and email wording.",
+        "features": [
+          "Preview and save changes across your HR system."
+        ]
+      }
+    },
+    "employee": {
+      "checkin": {
+        "summary": "Record your working day.",
+        "features": [
+          "Open the attendance camera",
+          "Record check-in or check-out",
+          "Review the check-in result"
+        ]
+      },
+      "attendance": {
+        "summary": "Keep track of your own attendance.",
+        "features": [
+          "Review your attendance history",
+          "View arrival and departure times",
+          "Check attendance status"
+        ]
+      },
+      "leave": {
+        "summary": "Plan time away and follow your requests.",
+        "features": [
+          "View this year’s leave balances",
+          "Submit a leave request",
+          "Track HR approval decisions"
+        ]
+      },
+      "payslips": {
+        "summary": "Your pay records, easy to find.",
+        "features": [
+          "Browse your payslips",
+          "Review monthly pay details",
+          "Open available salary records"
+        ]
+      },
+      "documents": {
+        "summary": "Your workplace documents, easy to find.",
+        "features": [
+          "Browse company and personal documents",
+          "Search by title or category",
+          "Open available document files"
+        ]
+      },
+      "sops": {
+        "summary": "Stay on top of daily procedures.",
+        "features": [
+          "View assigned SOPs",
+          "Open procedure instructions",
+          "Record task completion"
+        ]
+      },
+      "handovers": {
+        "summary": "Prepare work for the person covering you.",
+        "features": [
+          "View your outgoing handovers",
+          "Complete handover checklist items",
+          "Review progress and past records"
+        ]
+      },
+      "profile": {
+        "summary": "Your employee information in one place.",
+        "features": [
+          "Review your personal details",
+          "View work and department information",
+          "Change your account password"
+        ]
+      },
+      "overview": {
+        "summary": "See your personal work summary.",
+        "features": [
+          "View attendance and leave summaries",
+          "Read team announcements",
+          "Find active handover reminders"
+        ]
+      },
+      "qr": {
+        "summary": "Use your office code to record attendance.",
+        "features": [
+          "Open the QR scanner",
+          "Scan an office attendance code",
+          "Review your attendance result"
+        ]
+      },
+      "incoming": {
+        "summary": "See the work being handed over to you.",
+        "features": [
+          "Review incoming handovers",
+          "Read assigned checklist items",
+          "Acknowledge transferred responsibilities"
+        ]
+      },
+      "rewards": {
+        "summary": "Follow your rewards and claims.",
+        "features": [
+          "View your reward records",
+          "Review submitted claims",
+          "Track request status"
+        ]
+      },
+      "voting": {
+        "summary": "Share feedback about your colleagues.",
+        "features": [
+          "Choose an eligible colleague",
+          "Give a peer rating",
+          "Submit your feedback"
+        ]
+      },
+      "manual": {
+        "summary": "Find guidance for using your HR system.",
+        "features": [
+          "Browse help articles",
+          "Search for instructions",
+          "Read workflow guidance"
+        ]
+      },
+      "exit-survey": {
+        "summary": "Complete the survey for your departure.",
+        "features": [
+          "Open your assigned exit survey",
+          "Provide departure feedback",
+          "Submit completed survey answers"
+        ]
+      },
+      "people-access": {
+        "summary": "Choose apps, actions and employee access.",
+        "features": [
+          "Choose apps, actions and employee access."
+        ]
+      },
+      "approval-setup": {
+        "summary": "Assign each approval stage and its alternate.",
+        "features": [
+          "Assign each approval stage and its alternate."
+        ]
+      },
+      "approvals": {
+        "summary": "Review requests, decisions and payment history.",
+        "features": [
+          "Review requests, decisions and payment history."
+        ]
+      },
+      "probation": {
+        "summary": "Your probation evaluation and employee comments.",
+        "features": [
+          "Add or decline self-assessment",
+          "Read your finalized evaluation and PDF",
+          "Acknowledge receipt or send a written appeal"
+        ]
+      },
+      "warnings": {
+        "summary": "Read issued letters, add comments and confirm receipt.",
+        "features": [
+          "Private letter and PDF",
+          "Your comments and receipt"
+        ]
+      }
+    }
+  },
+  "recruitmentUpgrade": {
+    "jobOpening": "Job opening",
+    "jobOpenings": "Job openings",
+    "candidates": "Candidates",
+    "openingIntro": "Define the role, review supporting documents, then publish the details candidates will see.",
+    "createOpening": "Create job opening",
+    "editOpening": "Edit job opening",
+    "searchOpenings": "Search job openings",
+    "filterStatus": "Filter by status",
+    "all": "All statuses",
+    "draft": "Draft",
+    "published": "Published",
+    "closed": "Closed",
+    "version": "Version",
+    "noOpenings": "No job openings here yet",
+    "noOpeningsHint": "Start with an existing position and add the responsibilities and requirements for this hiring round.",
+    "detailsPending": "Details to be added",
+    "addCriteria": "Add the job description and requirements before publishing.",
+    "manageOpening": "Manage opening",
+    "closeOpening": "Close opening",
+    "closeHint": "This will stop new public applications. Existing candidates and job details will be kept.",
+    "confirmClose": "Close applications",
+    "closedSuccess": "Applications closed",
+    "cancel": "Cancel",
+    "viewCareers": "View careers page",
+    "retry": "Try again",
+    "loading": "Loading…",
+    "backOpenings": "Back to job openings",
+    "draftHint": "Save your work as a draft. Changes appear on the careers page only after you review and publish them.",
+    "discardHint": "You have unsaved changes. Discard them and go back?",
+    "keepEditing": "Keep editing",
+    "discard": "Discard changes",
+    "openingSteps": "Job opening steps",
+    "details": "Role & requirements",
+    "files": "Supporting files",
+    "review": "Review & publish",
+    "position": "Position",
+    "choosePosition": "Choose a position",
+    "positionHint": "Use an existing role, or create one in Positions.",
+    "managePositions": "Manage positions",
+    "jobTitle": "Job title",
+    "department": "Team / department",
+    "employmentType": "Employment type",
+    "Full-Time": "Full-time",
+    "Part-Time": "Part-time",
+    "Contract": "Contract",
+    "Internship": "Internship",
+    "workMode": "Work arrangement",
+    "On-site": "On-site",
+    "Remote": "Remote",
+    "Hybrid": "Hybrid",
+    "location": "Work location",
+    "workSchedule": "Working days & hours",
+    "vacancies": "Number of vacancies",
+    "jobDescription": "Job description & responsibilities",
+    "mustHave": "Must-have requirements",
+    "niceToHave": "Nice-to-have requirements",
+    "salaryMin": "Salary from",
+    "salaryMax": "Salary to",
+    "salaryRange": "Salary range",
+    "currency": "Currency",
+    "deadline": "Application closing date",
+    "showSalary": "Show this salary range on the careers page",
+    "salaryHint": "This advertised range is separate from employee payroll salaries. Leave it hidden if you prefer not to disclose it.",
+    "benefits": "Benefits",
+    "reviewHint": "This is a preview of your current draft. Check that the responsibilities and requirements accurately describe the role. Supporting files are private and will not appear here.",
+    "reviewConfirm": "I have reviewed this job description and the must-have requirements, including any text copied from uploaded files. I approve these details for publication and AI-assisted matching.",
+    "working": "Working…",
+    "unsaved": "Unsaved changes",
+    "draftSaved": "Draft saved",
+    "newDraft": "New draft",
+    "next": "Continue",
+    "saveDraft": "Save draft",
+    "saved": "Draft saved. Review and publish when ready.",
+    "publish": "Publish opening",
+    "republish": "Publish updated details",
+    "publishedSuccess": "Job opening published",
+    "shareOpening": "Share this opening",
+    "shareHint": "Share the published details or draft an announcement from the approved requirements.",
+    "viewPublished": "View published job",
+    "copyLink": "Copy application link",
+    "generateAnnouncement": "Draft announcement with AI",
+    "announcementDraft": "Announcement draft — review before sharing",
+    "copyAnnouncement": "Copy announcement",
+    "copied": "Copied",
+    "copyFailed": "Copy is unavailable. Select the text and copy it manually.",
+    "uploadDocuments": "Upload JD or requirements files",
+    "uploadHint": "PDF, DOCX or TXT · up to 10 MB per file · up to 12 files. Text-based documents can be extracted; scanned PDFs may need manual entry.",
+    "privateFiles": "Original files stay private to HR. Only text you add to the job fields and approve will be published or used for matching.",
+    "uploaded": "Files uploaded. Review the extracted text before using it.",
+    "fileTooLarge": "Each file must be 10 MB or smaller",
+    "extracting": "Uploading and reading the document…",
+    "extraction_ready": "Text ready for review",
+    "extraction_empty": "No readable text",
+    "extraction_failed": "Text could not be read",
+    "extraction_truncated": "Partial text — review original",
+    "openOriginal": "Open original",
+    "reviewText": "Review extracted text",
+    "remove": "Remove",
+    "removeHint": "Remove this source file? Text already copied into job fields will be kept.",
+    "confirmRemove": "Remove file",
+    "extractionFallback": "The original file is saved. For scanned, password-protected or unreadable documents, type or paste the relevant text into the job fields.",
+    "truncatedHint": "The first 50,000 characters were extracted. Check the original for any remaining content.",
+    "sourceHint": "Check and edit the text, then choose where to add it. Existing job text will be kept.",
+    "extractedText": "Extracted text",
+    "addTextTo": "Add reviewed text to",
+    "appendText": "Add to draft",
+    "textApplied": "Text added to the draft. Review it before publishing.",
+    "textTooLong": "This field can hold 30,000 characters. Shorten the reviewed text before adding it.",
+    "saveFirst": "Save a draft before uploading files",
+    "saveFirstHint": "Choose a position and enter a job title, then click Save draft. You can add the remaining details later.",
+    "allOpenings": "All job openings",
+    "noOpening": "No linked job opening",
+    "opening": "Job opening",
+    "chooseOpening": "Choose a published job opening",
+    "legacyPosition": "Position only (no approved job criteria)",
+    "resume": "Resume (PDF, DOCX or TXT)",
+    "coverLetter": "Cover letter / notes",
+    "assessmentNote": "AI matching is advisory. HR makes the hiring decision. Missing CV information is shown separately from confirmed gaps.",
+    "matched": "Matching evidence",
+    "missing": "Confirmed gaps",
+    "unverified": "Needs verification",
+    "noFindings": "No findings recorded",
+    "assessedAgainst": "Assessed against job opening version",
+    "openingCriteria": "Job criteria used for this application",
+    "joinTeam": "Join our team",
+    "careersIntro": "Explore our open roles, read the responsibilities and requirements, and apply for the opportunity that fits you.",
+    "employeeLogin": "Employee login",
+    "viewAndApply": "View role & apply",
+    "noPublicJobs": "No open positions at the moment",
+    "checkBack": "Please check back for new opportunities.",
+    "backJobs": "All open roles",
+    "applyForRole": "Apply for this role",
+    "fullName": "Full name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "submitApplication": "Submit application",
+    "submitting": "Submitting…",
+    "submittedTitle": "Application received",
+    "submittedHint": "Thank you for applying. Our team will review your application and contact you if there is a next step.",
+    "publicError": "We could not load job openings. Please try again.",
+    "openingUnavailable": "This job is no longer accepting applications. Explore the other open roles below.",
+    "unpublishedChanges": "These edits have not been published. Candidates and AI matching still use the last published version.",
+    "generateGuide": "Generate interview questions",
+    "interviewGuide": "Interview question guide",
+    "refreshCandidates": "Refresh candidates"
+  }
+}

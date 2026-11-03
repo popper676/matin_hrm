@@ -1,0 +1,74 @@
+{
+  "attendance": {
+    "title": "My Attendance",
+    "subtitle": "Your complete attendance history",
+    "tabs": {
+      "records": "My Records",
+      "overtime": "Overtime"
+    },
+    "recordsTitle": "Attendance Records",
+    "recordsTotal": "records total",
+    "noRecords": "No attendance records found.",
+    "days": "days"
+  },
+  "overtime": {
+    "title": "My Overtime",
+    "subtitle": "View assignments and request OT.",
+    "requestBtn": "Request OT",
+    "origins": {
+      "self": "You Requested",
+      "boss": "Assigned by Boss"
+    },
+    "status": {
+      "pendingBoss": "Waiting for Approval",
+      "actionRequired": "Action Required",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "actions": {
+      "waiting": "Waiting...",
+      "closed": "Closed",
+      "accept": "Accept",
+      "decline": "Decline"
+    },
+    "empty": "You have no overtime requests.",
+    "modal": {
+      "title": "Request Overtime",
+      "date": "Date *",
+      "start": "Start Time *",
+      "end": "End Time *",
+      "reason": "Reason / Task",
+      "reasonPlh": "Why are you requesting overtime?",
+      "cancel": "Cancel",
+      "submit": "Submit Request",
+      "sending": "Sending..."
+    },
+    "toast": {
+      "profileNotLoaded": "Employee profile not fully loaded yet.",
+      "reqSuccess": "Overtime requested successfully!",
+      "reqFailed": "Failed to request overtime",
+      "statusUpdate": "Overtime status updated!",
+      "statusFailed": "Failed to update status"
+    }
+  },
+  "visual": {
+    "loading": "Loading your portal",
+    "checkin": "Daily Attendance Check-In",
+    "photo": "Photo Check-In",
+    "qr": "QR Check-In",
+    "attendance": "Attendance Records",
+    "pendingLeaves": "Pending Leave Requests",
+    "payslips": "Payslips",
+    "rating": "Peer Rating",
+    "handovers": "Handovers",
+    "balances": "Leave Balances",
+    "announcements": "Company Announcements",
+    "daysLeft": "days left",
+    "daysUsed": "days used",
+    "requestLeave": "Request leave",
+    "quickAccess": "Your workspace",
+    "profileHint": "Personal details and contact information",
+    "payslipHint": "View your salary statements",
+    "handoverHint": "Review your handover checklists"
+  }
+}

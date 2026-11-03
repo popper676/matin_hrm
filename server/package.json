@@ -1,0 +1,52 @@
+{
+  "name": "lm-hr-server",
+  "version": "1.0.0",
+  "description": "Unlock Your Future HR Management API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "setup:owner": "node scripts/create-owner.js",
+    "test": "node --test tests/demo-data.test.js tests/completion.test.js tests/audit-integrity.test.js tests/fresh-instance.test.js tests/fresh-schema.test.js tests/hr-flow.test.js tests/recruitment.test.js tests/leave-forms.test.js tests/expense-forms.test.js tests/probation.test.js tests/warning-forms.test.js tests/operations.test.js tests/branding-setup.test.js tests/high-priority.test.js tests/dependency-security.test.js tests/medium-priority.test.js tests/session-refresh.test.js tests/salary-template.test.js lib/dateUtils.test.js && node tests/payroll_engine_unit.test.js",
+    "check": "node scripts/check-source.js",
+    "test:ui": "node tests/access-browser.js",
+    "setup:browser": "puppeteer browsers install chrome",
+    "demo:seed": "node scripts/demo-data.js seed",
+    "demo:status": "node scripts/demo-data.js status",
+    "demo:clear": "node scripts/demo-data.js clear",
+    "demo:recover-files": "node scripts/demo-data.js recover-files"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.50.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "geoip-lite": "^2.0.3",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "marked": "^18.0.14",
+    "multer": "2.4.0",
+    "node-cron": "^4.6.0",
+    "nodemailer": "10.1.7",
+    "pdfkit": "^0.19.1",
+    "puppeteer": "25.15.0",
+    "unpdf": "1.9.1",
+    "ws": "^8.21.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
+    "zod": "^4.4.3",
+    "sanitize-html": "^2.17.0",
+    "jszip": "3.10.1",
+    "@xmldom/xmldom": "^0.9.10"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.10"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

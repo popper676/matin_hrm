@@ -1,0 +1,33 @@
+import {DEFAULT_BRANDING} from '../../shared/branding.js';
+import {drawBrandHeader} from './brandPresentation.js';
+import PDFDocument from 'pdfkit';
+import {fileURLToPath} from 'node:url';
+import {COMPETENCIES,ATTENDANCE_FIELDS,TEXT_FIELDS,SELF_QUESTIONS,RATINGS,PROBATION_NOTES} from '../../shared/probationForm.js';
+export function probationPdf(r,a, branding=DEFAULT_BRANDING){
+ const doc=new PDFDocument({size:'A4',margin:46,bufferPages:true,info:{Title:'Probation evaluation',Author:branding.name}}),chunks=[];
+ const result=new Promise((resolve,reject)=>{doc.on('data',b=>chunks.push(b));doc.on('end',()=>resolve(Buffer.concat(chunks)));doc.on('error',reject);});
+ doc.font(fileURLToPath(new URL('../fonts/Padauk-Regular.ttf',import.meta.url)));
+ const room=h=>{if(doc.y+h>770)doc.addPage();};
+ const heading=s=>{room(55);doc.moveDown(.6).fontSize(13).fillColor('#294d66').text(s).moveDown(.3);};
+ const line=(label,value)=>{doc.fontSize(10).fillColor('#243247');const s=`${label}: ${value??'-'}`;room(doc.heightOfString(s,{width:500})+12);doc.text(s,{width:500,lineGap:3}).moveDown(.35);};
+ const page=s=>{if(doc.bufferedPageRange().count)doc.addPage();drawBrandHeader(doc,branding,10);doc.fontSize(23).fillColor('#15263a').text(s);doc.fontSize(8).fillColor('#68788b').text(`Reference ${r.id} | ${r.status}`).moveDown();};
+ const stamp=v=>v?new Date(v).toLocaleString('en-GB',{timeZone:'Asia/Bangkok',hour12:false})+' (Bangkok)':'-';
+ const d=r.data||{},e=r.employee_snapshot,anchor=r.anchor;
+ drawBrandHeader(doc,branding,10);doc.fontSize(23).fillColor('#15263a').text('Probation evaluation');line('Reference',r.id);line('Status',r.status);
+ heading('Employee information');for(const [label,k]of [['Full name','name'],['Employee ID','employee_number'],['Department','department'],['Job title','position'],['Hire date','hire_date'],['Manager / Supervisor','manager']])line(label,e[k]||'-');
+ line('HR representative',a?.stages.find(s=>s.key==='hr')?.assignee_name||'-');
+ line('Original period',anchor.period==='other'?'Custom calendar-day period':anchor.period+' months');line('Original end date',anchor.original_end);line('Current review end date',anchor.current_end);line('Maximum extension end date',anchor.max_extension_end);line('Evaluation due date',new Date(Date.parse(anchor.current_end)-14*86400000).toISOString().slice(0,10));
+ heading('Attendance & punctuality');for(const [k,label]of ATTENDANCE_FIELDS)line(label,d.attendance?.[k]??'-');line('Overall attendance rating',RATINGS[Number(d.attendance_rating)-1]||'-');line('Source','Evaluator-entered attendance counts; no unexcused absence is inferred by this form.');
+ page('Competencies, goals & training');line('Rating scale','1 Unsatisfactory, 2 Needs Improvement, 3 Satisfactory, 4 Good, 5 Excellent');for(const [k,label]of COMPETENCIES){const v=d.competencies?.[k];line(label,`${v?.rating||'-'} / 5${v?.comment?' | '+v.comment:''}`);}
+ heading('Probation goals & objectives');for(const [i,g]of (d.goals||[]).entries())line('Goal '+(i+1),`${g.goal} | Target: ${g.target} | ${g.achieved} | ${g.comment||'-'}`);if(!d.goals?.length)line('Goals','No starting goals recorded');
+ heading('Training & development');for(const [k,label]of TEXT_FIELDS.slice(0,4))line(label,d[k]||'-');
+ page('Assessment & employee comments');for(const [k,label]of TEXT_FIELDS.slice(4,7))line(label,d[k]||'-');line('Overall performance',RATINGS[Number(d.performance_rating)-1]||'-');line('Cultural fit',RATINGS[Number(d.cultural_fit)-1]||'-');line('Potential for growth',d.growth||'-');
+ heading('Employee self-assessment');line('Opportunity sent',stamp(r.self_invited_at));line('Response deadline',r.self_due_date);line('Response status',r.self_response?.status||'No response recorded');for(const [k,label]of SELF_QUESTIONS)line(label,r.self_response?.[k]||'-');line('Employee signed name',r.self_response?.signature||'-');line('Response recorded',stamp(r.self_responded_at));
+ page('Outcome & approvals');line('Manager recommendation',d.recommendation||'-');line('Recommended extension end date',d.new_end||'-');for(const [k,label]of TEXT_FIELDS.slice(7))line(label,d[k]||'-');
+ heading('Approvals');for(const s of a?.stages||[]){const h=a.history.find(h=>h.stage===s.key);line(s.label,h?`${h.actor_name} | ${h.decision} | ${stamp(h.at)}`:`${s.assignee_name} | Awaiting decision`);if(h?.comment)line('Comments',h.comment);}
+ heading('HR final decision');if(r.final_decision){const f=r.final_decision;for(const [label,k]of [['Final outcome','outcome'],['Confirmation / extension effective date','effective_date'],['New end date','new_end'],['Reason','reason'],['Extension conditions','conditions'],['New goals','new_goals'],['Benefits activation date','benefits_date'],['HR notes','hr_notes'],['Late decision explanation','late_reason'],['No-response opportunity record','no_response_note']])line(label,f[k]||'-');line('Employment status updated separately',f.employment_status_updated?'HR attested Yes: '+f.employment_update_reference:'No');line('HR signature',`${f.reviewer_name} | ${stamp(f.at)}`);line('Salary adjustment',r.salary_adjustment?(r.salary_adjustment.kind==='adjusted'?`${r.salary_adjustment.amount} ${r.salary_adjustment.currency}`:'No change'):'Restricted');if(f.outcome==='terminated')line('HR / legal review','HR confirmed completed legal review before release');if(r.legal_review)line('Internal legal review',`${r.legal_review.reviewer} | ${r.legal_review.date} | ${r.legal_review.reference}`);}else line('Final outcome','Awaiting human review');
+ page('Receipt, appeal & company policy');line('Decision recorded',stamp(r.decision_at));line('Copy released in employee portal',stamp(r.shared_at));line('Copy sharing deadline',r.share_due);line('Employee receipt acknowledged',stamp(r.acknowledged_at));line('Appeal deadline',r.appeal_due);if(r.appeal){line('Written appeal',r.appeal.statement);line('Signed name',r.appeal.signature);line('Appeal received / recorded',stamp(r.appeal.at));if(r.appeal.recorded_by_name){line('Actual HR received date',r.appeal.received_date);line('Written source reference',r.appeal.reference);line('Recorded by HR',r.appeal.recorded_by_name);}}if(r.appeal_response){line('HR appeal response',r.appeal_response.statement);line('Responded by',`${r.appeal_response.actor_name} | ${stamp(r.appeal_response.at)}`);}
+ heading('Important notes');PROBATION_NOTES.forEach((s,i)=>line(String(i+1),s));
+ const pages=doc.bufferedPageRange();for(let n=pages.start;n<pages.start+pages.count;n++){doc.switchToPage(n);doc.page.margins.bottom=0;doc.fontSize(8).fillColor('#68788b').text(`Confidential personnel record | ${r.id.slice(0,8)} | ${n+1} / ${pages.count}`,46,795,{width:500,lineBreak:false});}
+ doc.end();return result;
+}

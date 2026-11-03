@@ -1,0 +1,70 @@
+name: HR source and fresh-start checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      PUPPETEER_SKIP_DOWNLOAD: 'true'
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: |
+            server/package-lock.json
+            hrm-client/package-lock.json
+      - run: npm ci --prefix server --no-audit --no-fund
+      - run: npm ci --prefix hrm-client --no-audit --no-fund
+      - run: npm audit --prefix server --audit-level=moderate
+      - run: npm audit --prefix hrm-client --audit-level=moderate
+      - run: npm run check
+      - run: npm run lint --prefix hrm-client
+      - run: npm test
+      - run: npm run build
+      - run: npm run test:ui --prefix server
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: access-browser-review
+          path: access-browser-artifacts
+          if-no-files-found: ignore
+
+  container:
+    runs-on: ubuntu-latest
+    env:
+      DOCKER_BUILDKIT: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build complete production image
+        run: docker build -t uyf-hr-integrity .
+      - name: Verify shared imports and offline Chromium rendering
+        run: |
+          docker run --rm --network none --entrypoint node \
+            -e SUPABASE_URL=https://dockertest.supabase.co \
+            -e SUPABASE_SERVICE_KEY=offline-container-check \
+            -e EXPECTED_SUPABASE_PROJECT_REF=dockertest \
+            -e HR_INSTANCE_ID=00000000-0000-4000-8000-000000000001 \
+            -e JWT_SECRET=offline-container-integrity-check-secret-123456 \
+            uyf-hr-integrity --input-type=module -e "
+              await import('../shared/accessPolicy.js');
+              await import('./routes/payroll.js');
+              await import('./routes/manual.js');
+              await import('./routes/lifecycle.js');
+              const fs=await import('node:fs/promises');
+              await fs.access('../hrm-client/dist/index.html');
+              const {default:puppeteer}=await import('puppeteer');
+              const browser=await puppeteer.launch({args:['--no-sandbox']});
+              try {const page=await browser.newPage();await page.setJavaScriptEnabled(false);await page.setContent('<h1>HR integrity check</h1>');if((await page.pdf()).length<100)throw new Error('Empty PDF');}
+              finally {await browser.close();}
+              console.log('Production image imports and PDF rendering passed.');
+              process.exit(0);
+            "

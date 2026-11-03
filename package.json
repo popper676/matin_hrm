@@ -1,0 +1,14 @@
+{
+  "name": "lm-group-hr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HR-only management system for LM Group",
+  "scripts": {
+    "install:all": "npm ci --prefix server && npm ci --prefix hrm-client",
+    "build": "npm run build --prefix hrm-client",
+    "start": "npm start --prefix server",
+    "test": "npm test --prefix server",
+    "check": "npm run check --prefix server",
+    "docs:guides": "node scripts/build-guides.mjs"
+  }
+}

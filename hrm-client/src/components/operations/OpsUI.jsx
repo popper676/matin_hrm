@@ -1,0 +1,11 @@
+import {useLanguage} from '../../context/LanguageContext';
+import '../../styles/operations.css';
+export const useWords=()=>{const {language}=useLanguage();return(en,my)=>language==='my'?my:en;};
+export const amount=(n,c='THB')=>`${Number(n??0).toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2})} ${c}`;
+export function LoadingError({query}){const l=useWords();if(query.isLoading)return <div className="ops-empty" role="status">{l('Loading your workspace…','မိမိ အလုပ်နေရာကို ဖတ်နေသည်…')}</div>;if(query.error)return <p className="ops-error" role="alert">{query.error.response?.data?.error||query.error.message}</p>;return null;}
+export function Field({label,value,onChange,type='text',area=false,required=false,maxLength=2000,min,max,step}){return <label className="ops-field">{label}{area?<textarea rows={3} required={required} maxLength={maxLength} value={value} onChange={e=>onChange(e.target.value)}/>:<input type={type} required={required} value={value} min={min} max={max} step={step} maxLength={maxLength} onChange={e=>onChange(e.target.value)}/>}</label>;}
+export function Check({label,value,onChange,required=false}){return <label className="ops-check"><input type="checkbox" required={required} checked={!!value} onChange={e=>onChange(e.target.checked)}/><span>{label}</span></label>;}
+export function Badge({value}){return <span className={'ops-status ops-status-'+String(value||'').toLowerCase().replace(/[^a-z]/g,'')}>{String(value||'—').replaceAll('_',' ')}</span>;}
+export function BusinessSelect({businesses,value,onChange}){const l=useWords();return <label className="ops-field">{l('Business','လုပ်ငန်း')}<select value={value} onChange={e=>onChange(e.target.value)}><option value="">{l('All businesses','လုပ်ငန်းအားလုံး')}</option>{businesses.map(b=><option key={b.key} value={b.key}>{l(b.name,b.name_my||b.name)}{!b.is_active?' · '+l('Archived','သိမ်းထားသောလုပ်ငန်း'):''}</option>)}</select></label>;}
+export function Stats({items}){return <div className="ops-stats">{items.map(v=><div className="ops-stat" key={v.label}><span>{v.label}</span><strong>{v.value}</strong>{v.note&&<small>{v.note}</small>}</div>)}</div>;}
+export function Empty({children}){return <div className="ops-empty">{children}</div>;}

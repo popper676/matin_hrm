@@ -1,0 +1,66 @@
+# Dependencies — never include node_modules in the image context
+node_modules/
+*/node_modules/
+
+# Build artifacts (will be built inside Docker)
+dist/
+build/
+hrm-client/dist/
+
+# Git
+.git/
+.gitignore
+
+# Secrets — never bake into the image
+.env
+.env.*
+server/.env
+server/.env.*
+
+# SSH keys — should never be near Docker build context
+.ssh_temp/
+gcp_actions_key
+gcp_actions_key.pub
+
+# Legacy and archive
+Legacy_Python_Scripts_Archive/
+__pycache__/
+*.pyc
+requirements.txt
+
+# Root-level test and utility scripts (not needed in production image)
+*.mjs
+*.cjs
+test*.js
+gen_ssh.js
+fix_*.js
+read_excel*.js
+parse_costing.mjs
+scan.mjs
+fetch_db.mjs
+seed_*.sql
+create_*.sql
+expose_schemas.sql
+create_views.sql
+run_agent.vbs
+
+# Data files — belong in database, not in container
+*.xlsx
+database.db
+payload.json
+parsed_costing.json
+kpi_settings.json
+
+# CI/CD scripts used only in GitHub Actions runner
+deploy.sh
+deploy_nginx_fix.sh
+deploy_setup.sh
+env.yaml.example
+
+# Logs
+npm-debug.log
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

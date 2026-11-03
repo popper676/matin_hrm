@@ -1,0 +1,8 @@
+/* Audit-specific semantics; layout, tables, and themes use the shared system. */
+.audit-logs-container { background: var(--uyf-panel); border: 1px solid var(--uyf-border); box-shadow: var(--uyf-shadow); }
+.audit-logs-user,.audit-logs-module,.context-value { color: var(--uyf-text); }
+.audit-logs-time,.audit-logs-role,.audit-logs-details,.audit-logs-context,.context-label,.audit-logs-fallback,.audit-logs-empty { color: var(--uyf-muted); }
+.audit-logs-spinner { border-color: var(--uyf-accent); border-top-color: transparent; }
+.audit-action-CREATE { background: color-mix(in srgb,var(--uyf-success) 9%,transparent); color: var(--uyf-success); }
+.audit-action-UPDATE,.audit-action-UPDATE_BULK { background: color-mix(in srgb,var(--uyf-info) 9%,transparent); color: var(--uyf-info); }
+.audit-action-DELETE { background: color-mix(in srgb,var(--uyf-danger) 9%,transparent); color: var(--uyf-danger); }

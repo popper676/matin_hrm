@@ -1,0 +1,145 @@
+.expense-workspace {
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--uyf-border);
+}
+.expense-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 16px;
+}
+.expense-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  padding: 22px;
+  border: 1px solid var(--uyf-border);
+  border-radius: 16px;
+  background: var(--uyf-panel);
+  color: var(--uyf-text);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+.expense-card:hover {
+  border-color: var(--uyf-accent);
+  box-shadow: var(--uyf-shadow-lg);
+}
+.expense-card strong {
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+.expense-card small,
+.expense-policy {
+  font-size: 12px;
+  color: var(--uyf-muted);
+  line-height: 1.8;
+}
+.expense-card-link {
+  font-size: 11px;
+  color: var(--uyf-accent-text);
+}
+.expense-wide {
+  grid-column: 1/-1;
+}
+.expense-form .leave-form-grid {
+  margin-top: 24px;
+}
+.expense-form .leave-form-preview {
+  margin: 24px 0;
+}
+.expense-form .leave-form-preview strong {
+  font-size: 25px;
+  overflow-wrap: anywhere;
+}
+.expense-over-budget {
+  color: var(--uyf-danger) !important;
+}
+.expense-policy {
+  margin: 18px 0;
+}
+.expense-review-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.expense-review h3 {
+  margin: 22px 0 16px;
+}
+.expense-review dd {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--uyf-text);
+}
+.expense-review .access-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.expense-files {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.expense-files a {
+  display: flex;
+  gap: 8px;
+  color: var(--uyf-accent-text);
+  overflow-wrap: anywhere;
+}
+.expense-review .access-history {
+  padding-left: 20px;
+}
+.expense-review .access-history p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .expense-review .access-facts {
+    grid-template-columns: 1fr;
+  }
+  .expense-form .leave-form-preview header {
+    flex-wrap: wrap;
+  }
+  .expense-card {
+    padding: 18px;
+  }
+}
+
+/* MOD-004: collapse nonessential inputs on standard expense requests. */
+.expense-extra-details {
+  margin: 20px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--uyf-border);
+  border-radius: 12px;
+}
+.expense-extra-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--uyf-text);
+}
+.expense-extra-details .leave-form-grid { margin-top: 18px; }
+
+/* BUG-001: approval route labels, reviewer and decision state must never run together. */
+.expense-review .access-history li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  min-width: 0;
+  padding: 12px 0;
+}
+.expense-review .access-history li > strong,
+.expense-review .access-history li > span,
+.expense-review .access-history li > small {
+  display: block;
+  max-width: 100%;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.expense-review .access-history li > p { margin: 4px 0; }

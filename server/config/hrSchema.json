@@ -1,0 +1,683 @@
+{
+  "Departments": [
+    "Department_name",
+    "Descriptions"
+  ],
+  "shifts": [
+    "shift_name",
+    "start_time",
+    "end_time",
+    "break_minutes",
+    "grace_minutes",
+    "is_active",
+    "description",
+    "grace_period_minutes"
+  ],
+  "positions": [
+    "title",
+    "team",
+    "level",
+    "base_salary",
+    "is_hiring",
+    "description",
+    "department_id",
+    "required_skills",
+    "reports_to"
+  ],
+  "Employees": [
+    "employee_id",
+    "Full_name",
+    "email",
+    "phone",
+    "Dept_id",
+    "position_id",
+    "Manager_id",
+    "default_shift_id",
+    "hire_date",
+    "date_of_birth",
+    "national_id",
+    "address",
+    "employment_type",
+    "status",
+    "employment_status",
+    "salary",
+    "avatar_url",
+    "resign_code",
+    "resign_date",
+    "resign_reason",
+    "deleted_at",
+    "probation_period",
+    "work_location"
+  ],
+  "sys_users": [
+    "username",
+    "password_hash",
+    "role",
+    "full_name",
+    "employee_id",
+    "is_active",
+    "bot_linking_code",
+    "telegram_chat_id",
+    "is_owner"
+  ],
+  "sys_audit_logs": [
+    "user_id",
+    "user_name",
+    "action",
+    "module",
+    "details",
+    "ip_address"
+  ],
+  "system_notifications": [
+    "recipient_user_id",
+    "recipient_role",
+    "title",
+    "message",
+    "link_url",
+    "is_read",
+    "employee_id"
+  ],
+  "Leave_type": [
+    "type_name",
+    "is_paid",
+    "default_days",
+    "entitled_days",
+    "description",
+    "kind"
+  ],
+  "Leave_balances": [
+    "employee_id",
+    "leave_type_id",
+    "year",
+    "entitled_days",
+    "used_days",
+    "remain_days",
+    "version"
+  ],
+  "Leave_Request": [
+    "employee_id",
+    "leave_type_id",
+    "start_date",
+    "end_date",
+    "reason",
+    "status",
+    "document_url",
+    "e_signature",
+    "coverage_handover_id",
+    "return_handover_id",
+    "form_version",
+    "requester_id",
+    "session",
+    "working_days",
+    "calendar_snapshot",
+    "form_snapshot",
+    "conditions",
+    "conditions_acknowledged_at",
+    "conditions_acknowledged_by",
+    "approved_at"
+  ],
+  "attendance_records": [
+    "employee_id",
+    "check_in",
+    "check_out",
+    "overtime_hours",
+    "attendance_method",
+    "is_late",
+    "claimed_shift_id",
+    "shift_approval_status",
+    "special_shift_reason",
+    "check_in_photo_url",
+    "check_out_photo_url"
+  ],
+  "employee_daily_schedules": [
+    "employee_id",
+    "schedule_date",
+    "shift_id",
+    "is_off_day",
+    "notes"
+  ],
+  "employee_rosters": [
+    "employee_id",
+    "day_of_week",
+    "shift_id",
+    "is_off_day",
+    "start_date",
+    "end_date"
+  ],
+  "qr_attendance_tokens": [
+    "employee_id",
+    "token",
+    "expires_at",
+    "used"
+  ],
+  "biometric_device": [
+    "device_name",
+    "name",
+    "serial_number",
+    "ip_address",
+    "port",
+    "location",
+    "is_active",
+    "api_key"
+  ],
+  "biometric_employees": [
+    "biometric_id",
+    "employee_id",
+    "device_id"
+  ],
+  "biometric_logs": [
+    "device_id",
+    "employee_id",
+    "raw_time"
+  ],
+  "overtime_requests": [
+    "employee_id",
+    "ot_date",
+    "start_time",
+    "end_time",
+    "requested_hours",
+    "reason",
+    "requested_by",
+    "status"
+  ],
+  "kpis": [
+    "employee_id",
+    "recent_period",
+    "target_score",
+    "actual_score",
+    "review_comment"
+  ],
+  "boss_kpi_assignments": [
+    "title",
+    "description",
+    "assigned_to_id",
+    "assigned_to_name",
+    "deadline",
+    "status"
+  ],
+  "payrolls": [
+    "employee_id",
+    "month",
+    "basic_salary",
+    "allowances",
+    "deductions",
+    "bonus",
+    "net_salary",
+    "kpi_id",
+    "final_kpi_score",
+    "payment_status",
+    "notes",
+    "calculation_source",
+    "workspace_notes",
+    "salary_template"
+  ],
+  "company_payroll_policy": [
+    "company_id",
+    "salary_divisor",
+    "weekly_holidays",
+    "timezone",
+    "approved_leave_counts_as_punctual",
+    "peer_score_max_stars",
+    "default_sop_score",
+    "default_peer_score",
+    "created_by_user_id",
+    "updated_by_user_id"
+  ],
+  "kpi_settings": [
+    "settings"
+  ],
+  "recruitment_candidates": [
+    "position_id",
+    "full_name",
+    "email",
+    "phone",
+    "notes",
+    "status",
+    "resume_url",
+    "ai_score",
+    "ai_reasoning",
+    "interview_guide",
+    "interview_date",
+    "opening_id",
+    "opening_snapshot",
+    "ai_evaluation",
+    "resume_text",
+    "form_data"
+  ],
+  "employee_onboarding": [
+    "employee_id",
+    "status",
+    "start_date",
+    "notes",
+    "completion_pct"
+  ],
+  "onboarding_tasks": [
+    "task_name",
+    "category",
+    "assigned_to_role",
+    "due_days_after_hire",
+    "is_preboarding"
+  ],
+  "onboarding_assignments": [
+    "onboarding_id",
+    "task_id",
+    "status",
+    "due_date",
+    "completed_at"
+  ],
+  "corporate_offboarding": [
+    "employee_id",
+    "last_working_date",
+    "last_working_day",
+    "termination_reason",
+    "reason",
+    "exit_type",
+    "resignation_date",
+    "settlement_status",
+    "handover_id",
+    "handover_required",
+    "handover_waived_reason",
+    "handover_waived_by",
+    "knowledge_transfer",
+    "assets_returned",
+    "access_revoked",
+    "exit_interview_done",
+    "final_payroll_done",
+    "nda_signed",
+    "notes",
+    "laptop_returned",
+    "access_card_returned"
+  ],
+  "offboarding_case_tasks": [
+    "offboarding_id",
+    "task_name",
+    "category",
+    "responsible",
+    "status",
+    "due_date",
+    "completed_at"
+  ],
+  "exit_interviews": [
+    "offboarding_id",
+    "employee_id",
+    "reason_for_leaving",
+    "job_satisfaction",
+    "work_environment",
+    "management_rating",
+    "compensation_benefits",
+    "career_growth",
+    "recommend_company",
+    "return_future",
+    "additional_comments",
+    "interviewer_name",
+    "interview_date",
+    "highlights",
+    "improvements"
+  ],
+  "employee_handovers": [
+    "outgoing_employee_id",
+    "successor_employee_id",
+    "successor_type",
+    "trigger_type",
+    "offboarding_id",
+    "effective_date",
+    "handover_deadline",
+    "status",
+    "completion_pct",
+    "created_by_user_id",
+    "approved_by_user_id",
+    "approved_at",
+    "waived_by_user_id",
+    "waived_at",
+    "waived_reason",
+    "submitted_at",
+    "notes",
+    "leave_request_id",
+    "expected_return_date",
+    "parent_handover_id",
+    "version"
+  ],
+  "handover_items": [
+    "handover_id",
+    "title",
+    "description",
+    "category",
+    "owner_role",
+    "sort_order",
+    "is_required",
+    "status",
+    "outgoing_notes",
+    "evidence_url",
+    "successor_acknowledged",
+    "successor_ack_at",
+    "completed_at"
+  ],
+  "handover_attachments": [
+    "handover_id",
+    "handover_item_id",
+    "uploaded_by_user_id",
+    "file_name",
+    "file_url",
+    "file_type"
+  ],
+  "employee_career_timeline": [
+    "employee_id",
+    "event_type",
+    "title",
+    "description",
+    "previous_position",
+    "new_position",
+    "previous_salary",
+    "new_salary",
+    "effective_date"
+  ],
+  "sop_templates": [
+    "position_id",
+    "task_description"
+  ],
+  "daily_sops": [
+    "employee_id",
+    "task_description",
+    "content",
+    "title",
+    "assigned_date",
+    "assigned_by",
+    "is_completed",
+    "completed_at",
+    "proof_video_url",
+    "manual_report"
+  ],
+  "peer_voting_records": [
+    "voter_id",
+    "nominee_id",
+    "score",
+    "comment"
+  ],
+  "peer_votes": [
+    "voter_id",
+    "nominee_id",
+    "score",
+    "attendance_score",
+    "punctuality_score",
+    "sop_score",
+    "peer_score",
+    "initiative_score",
+    "comment"
+  ],
+  "announcements": [
+    "title",
+    "content",
+    "priority",
+    "target_role",
+    "is_pinned"
+  ],
+  "employee_documents": [
+    "employee_id",
+    "title",
+    "doc_type",
+    "category",
+    "description",
+    "file_url",
+    "effective_date",
+    "status",
+    "uploaded_by_user_id",
+    "requested_by_user_id",
+    "boss_signature",
+    "boss_signed_at",
+    "hr_signature",
+    "hr_signed_at",
+    "rejection_reason"
+  ],
+  "doc_approval_requests": [
+    "employee_id",
+    "title",
+    "doc_type",
+    "category",
+    "description",
+    "file_url",
+    "effective_date",
+    "status",
+    "requested_by_user_id",
+    "boss_signature",
+    "boss_signed_at",
+    "hr_signature",
+    "hr_signed_at",
+    "rejection_reason",
+    "generated_snapshot"
+  ],
+  "rewards_and_claims": [
+    "employee_id",
+    "claim_type",
+    "custom_type",
+    "requested_amount",
+    "approved_amount",
+    "description",
+    "proof_image_url",
+    "status",
+    "requested_by",
+    "approved_by",
+    "admin_remarks",
+    "currency",
+    "form_version",
+    "requester_id",
+    "request_number",
+    "form_snapshot",
+    "paid_amount",
+    "payment_date",
+    "payment_reference"
+  ],
+  "hrm_manual_categories": [
+    "name",
+    "order_index"
+  ],
+  "hrm_manual_articles": [
+    "category_id",
+    "title",
+    "draft_content",
+    "published_content",
+    "status",
+    "version",
+    "order_index",
+    "created_by",
+    "updated_by",
+    "published_by",
+    "published_at"
+  ],
+  "hrm_manual_versions": [
+    "article_id",
+    "content",
+    "version",
+    "created_by"
+  ],
+  "hrm_manual_permissions": [
+    "employee_id",
+    "can_edit",
+    "can_publish",
+    "can_manage_editors"
+  ],
+  "boss_chat_sessions": [
+    "user_id",
+    "title"
+  ],
+  "boss_chat_messages": [
+    "session_id",
+    "role",
+    "content"
+  ],
+  "job_openings": [
+    "position_id",
+    "title",
+    "department",
+    "job_description",
+    "required_requirements",
+    "preferred_requirements",
+    "employment_type",
+    "work_mode",
+    "location",
+    "work_schedule",
+    "salary_min",
+    "salary_max",
+    "currency",
+    "salary_visible",
+    "benefits",
+    "vacancies",
+    "deadline",
+    "status",
+    "revision",
+    "published_snapshot",
+    "published_at",
+    "created_by",
+    "updated_by"
+  ],
+  "job_opening_files": [
+    "opening_id",
+    "file_name",
+    "storage_path",
+    "mime_type",
+    "size_bytes",
+    "extracted_text",
+    "extraction_status",
+    "uploaded_by"
+  ],
+  "hr_expense_counters": [
+    "business_unit",
+    "request_year",
+    "last_number"
+  ],
+  "hr_probation_forms": [
+    "id",
+    "employee_id",
+    "creator_id",
+    "status",
+    "data",
+    "employee_snapshot",
+    "anchor",
+    "self_invited_at",
+    "self_due_date",
+    "self_response",
+    "self_responded_at",
+    "submitted_at",
+    "final_decision",
+    "legal_review",
+    "salary_adjustment",
+    "decision_at",
+    "shared_at",
+    "share_due",
+    "appeal_due",
+    "acknowledged_at",
+    "appeal",
+    "appeal_response",
+    "version"
+  ],
+  "hr_warning_forms": [
+    "id",
+    "employee_id",
+    "creator_id",
+    "letter_number",
+    "status",
+    "data",
+    "employee_snapshot",
+    "submitted_at",
+    "issued_at",
+    "issuance",
+    "employee_comment",
+    "acknowledgment",
+    "external_receipts",
+    "hr_records",
+    "version"
+  ],
+  "hr_warning_counters": [
+    "letter_year",
+    "last_number"
+  ],
+  "hr_business_units": [
+    "key",
+    "name",
+    "is_active",
+    "version"
+  ],
+  "hr_employee_business_sets": [
+    "id",
+    "employee_id",
+    "effective_from",
+    "items",
+    "version"
+  ],
+  "hr_operations_settings": [
+    "id",
+    "settings",
+    "version"
+  ],
+  "hr_reminder_deliveries": [
+    "recipient_user_id",
+    "source_key",
+    "bucket",
+    "notification_id"
+  ],
+  "hr_reminder_runs": [
+    "status",
+    "delivered",
+    "skipped",
+    "failed"
+  ],
+  "hr_expense_receipts": [
+    "id",
+    "expense_id",
+    "created_by",
+    "reference",
+    "documents"
+  ],
+  "hr_brand_settings": [
+    "id",
+    "settings",
+    "version",
+    "updated_by",
+    "updated_at"
+  ],
+  "hr_owner_setup_reviews": [
+    "step",
+    "fingerprint",
+    "version",
+    "reviewed_by",
+    "reviewed_at"
+  ],
+  "hr_ai_action_proposals": [
+    "id",
+    "actor_id",
+    "session_id",
+    "kind",
+    "payload",
+    "status",
+    "expires_at",
+    "result"
+  ],
+  "hr_auth_sessions": [
+    "id",
+    "user_id",
+    "created_at",
+    "expires_at",
+    "revoked_at"
+  ],
+  "hr_notification_receipts": [
+    "notification_id",
+    "user_id",
+    "read_at",
+    "dismissed_at"
+  ],
+  "hr_birthday_deliveries": [
+    "employee_id",
+    "recipient_user_id",
+    "occurrence",
+    "reminder_day",
+    "notification_id"
+  ],
+  "hr_expense_routing": [
+    "id",
+    "mode",
+    "limits",
+    "stages",
+    "version",
+    "updated_by",
+    "updated_at"
+  ]
+}

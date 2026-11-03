@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+/* Preserve the existing v3 utility names and defaults during the v4 upgrade. */
+@theme {
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --radius-sm: 0.125rem;
+  --radius: 0.25rem;
+  --blur-sm: 4px;
+  --default-ring-width: 3px;
+  --default-ring-color: #3b82f6;
+}
+@utility shadow { box-shadow: var(--shadow); }
+@utility rounded { border-radius: var(--radius); }
+@utility flex-shrink-0 { flex-shrink: 0; }
+@utility flex-shrink { flex-shrink: 1; }
+@utility flex-grow-0 { flex-grow: 0; }
+@utility flex-grow { flex-grow: 1; }
+@utility outline-none { outline: 2px solid transparent; outline-offset: 2px; }
+@layer base {
+  *, ::before, ::after, ::backdrop, ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+/* Base primitives. Page-specific layouts remain in React; themes live in uyf-theme.css. */
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button:not(:disabled), a { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+button:not(:disabled) { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+img, video, canvas { max-width: 100%; }
+.form-input { width: 100%; padding: 11px 14px; outline: none; }
+.form-label { display: block; margin-bottom: 7px; font-size: 12px; font-weight: 550; }
+.animate-slide-in { animation: uyf-dialog-in .22s ease-out; }
+.glass { background: var(--uyf-panel); border: 1px solid var(--uyf-border); backdrop-filter: blur(16px); }
+.emp-avatar { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 38px; height: 38px; border-radius: 12px; background: var(--uyf-tint); color: var(--uyf-accent-text); font-weight: 600; }
+.emp-id-badge { display: inline-flex; font-size: 11px; padding: 4px 8px; border: 1px solid var(--uyf-border); border-radius: 6px; color: var(--uyf-muted); background: var(--uyf-panel-soft); }
+.emp-status-badge { white-space: nowrap; }
+.emp-action-group { display: flex; align-items: center; gap: 5px; }
+.emp-action-view, .emp-action-edit, .emp-action-delete { display: inline-flex; align-items: center; justify-content: center; gap: 5px; padding: 7px; border-radius: 8px; }
+.emp-action-text { display: none; }
+.emp-btn-primary, .emp-btn-secondary { display: inline-flex; align-items: center; justify-content: center; border-radius: 10px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.emp-btn-primary { background: var(--uyf-accent); color: white; border: 1px solid var(--uyf-accent); }
+.emp-btn-secondary { background: var(--uyf-panel); color: var(--uyf-text); border: 1px solid var(--uyf-border); }
+.emp-search-input, .emp-filter-select { padding: 11px 14px; border-radius: 10px; border: 1px solid var(--uyf-border); background: var(--uyf-panel); font-size: 13px; }
+.emp-pagination { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 22px; }
+.emp-pagination button { padding: 7px 11px; border: 1px solid var(--uyf-border); border-radius: 8px; background: var(--uyf-panel); }
+.emp-pagination button:disabled { opacity: .35; }
+.emp-dept-header { background: var(--uyf-panel-soft); }
+.emp-dept-header td { padding: 14px 22px; }
+.emp-dept-header td > div { display: flex; align-items: center; gap: 9px; }
+.emp-info-box { padding: 16px; border-radius: 10px; background: var(--uyf-tint); border: 1px solid var(--uyf-border); }
+.emp-code-block { display: block; white-space: pre-wrap; padding: 12px; margin-top: 10px; border-radius: 8px; background: var(--uyf-panel-soft); font-size: 11px; }
+.emp-modal-surface { background: var(--uyf-panel); border: 1px solid var(--uyf-border); }
+.emp-file-input::file-selector-button { padding: 8px 12px; margin-right: 12px; border: 0; border-radius: 7px; background: var(--uyf-tint); color: var(--uyf-accent-text); }
+.react-datepicker__month-wrapper { display: flex !important; justify-content: space-around; }
+.react-datepicker__month-text, .react-datepicker__quarter-text { display: inline-block !important; width: 30% !important; padding: 8px !important; }
+@media print {
+  .uyf-topbar,.uyf-page-footer,.shell-dock,.app-preview,.shell-popover { display: none !important; }
+  .uyf-main { margin: 0 !important; }
+  .uyf-page-content { padding: 0 !important; }
+  body,.uyf-app { background: white !important; color: black !important; }
+}

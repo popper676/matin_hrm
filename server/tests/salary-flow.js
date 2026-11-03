@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import {extractText,getDocumentProxy} from 'unpdf';
+import {emptyPolicy} from '../../shared/accessPolicy.js';
+export async function exerciseSalary({db,request,rejected,realFetch,base,getCookie,setCookie,ownerCookie,makeAccount}) {
+ setCookie(ownerCookie);
+ const user=await makeAccount('SAL-API','Salary API employee'),other=await makeAccount('SAL-OTHER','Unrelated salary employee');
+ const policy={...emptyPolicy(),scope:'selected',employee_ids:[user.emp],modules:{payroll:['view','create','edit','pay']},personal:['payslips'],sensitive:{salary:true,bank:false,identity:false}};
+ await request('/access/people/'+user.id,'PUT',{policy,version:0});
+ await request('/auth/login','POST',{username:user.username,password:'Test-pass-1'});
+ const accountCookie=getCookie(),month='2027-05',input={basic_salary:30000,fixed_allowance:3000,ot_hours:10,special_allowance:1500,scarcity_allowance:500,ssb_employee:875,ssb_employer:875,income_tax:1000,staff_loan:2000,unpaid_leave_days:.5,other_deduction:200};
+ const list=await request('/payroll/salary-template?month='+month);assert(list.employees.every(e=>e.id===user.emp));assert(!JSON.stringify(list).includes('Unrelated salary employee'));
+ const first=(await request('/payroll/salary-template','POST',{employee_id:user.emp,month,version:0,input})).payroll;
+ assert.equal(first.net_salary,33259.62);assert.equal(first.salary_template.employee_name,'Salary API employee');
+ await rejected('/payroll/salary-template','POST',{employee_id:other.emp,month,version:0,input},403);
+ await rejected('/payroll/salary-template','POST',{employee_id:user.emp,month,version:0,input},409);
+ await rejected('/payroll/'+first.id,'PUT',{basic_salary:1},409);
+ const edited=(await request('/payroll/salary-template','POST',{employee_id:user.emp,month,version:1,input,notes:'Reviewed salary'})).payroll;assert.equal(edited.salary_template.version,2);
+ const pdf=await realFetch(base+'/payroll/'+first.id+'/payslip',{headers:{Cookie:accountCookie}});assert.equal(pdf.status,200);assert.match(pdf.headers.get('content-type'),/pdf/);
+ const text=await extractText(await getDocumentProxy(new Uint8Array(await pdf.arrayBuffer())),{mergePages:true});assert.match(text.text,/33,259.62/);assert.match(text.text,/SSB Employer/);assert(!text.text.includes('CorpHRM'));
+ const own=await request('/portal');assert.equal(own.payslips.find(p=>p.id===first.id).salary_template.ssb_employer,875);
+ await request('/payroll/salary-template/'+first.id+'/pay','POST',{version:2});
+ await rejected('/payroll/salary-template/'+first.id+'/pay','POST',{version:2},409);
+ await rejected('/payroll/salary-template','POST',{employee_id:user.emp,month,version:2,input},409);
+ setCookie(ownerCookie);await request('/access/people/'+user.id,'PUT',{policy:{...policy,modules:{},sensitive:{salary:false,bank:false,identity:false}},version:1});
+ setCookie(accountCookie);await rejected('/payroll/salary-template?month='+month,'GET',undefined,403);
+ const personalPdf=await realFetch(base+'/payroll/'+first.id+'/payslip',{headers:{Cookie:getCookie()}});assert.equal(personalPdf.status,200,'personal Payslips permits own PDF without management Salary');
+ setCookie(ownerCookie);await request('/access/people/'+other.id,'PUT',{policy:{...emptyPolicy(),personal:['payslips']},version:0});
+ await request('/auth/login','POST',{username:other.username,password:'Test-pass-1'});
+ const foreign=await realFetch(base+'/payroll/'+first.id+'/payslip',{headers:{Cookie:getCookie()}});assert.equal(foreign.status,403);
+ assert.equal((await db.query('SELECT salary FROM "Employees" WHERE id=$1',[user.emp])).rows[0].salary,'45000');
+ setCookie(ownerCookie);
+}

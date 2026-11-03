@@ -1,0 +1,495 @@
+{
+  "owner": [
+    {
+      "id": "setup",
+      "icon": "settings",
+      "href": "/owner-setup",
+      "title": {
+        "en": "Finish the seven setup reviews",
+        "my": "Setup အဆင့် ၇ ခု အပြီးသတ်ရန်"
+      },
+      "steps": {
+        "en": [
+          "Open Owner setup from Apps Home. Review Brand identity, Expense business tags, Employees & accounts, Accounts & permissions, Approval responsibilities, Leave calendar & entitlements and Payroll policies.",
+          "Follow the configuration links and save the real settings in each app. The return-to-setup link takes you back to the same step.",
+          "After reviewing each step, tick the confirmation and record the review. A relevant settings change reopens the review; the progress count reflects saved configuration."
+        ],
+        "my": [
+          "Apps Home မှ Owner setup ဖွင့်ပါ။ Brand၊ Expense လုပ်ငန်းအမည်များ၊ ဝန်ထမ်းနှင့် အကောင့်များ၊ သုံးခွင့်များ၊ အတည်ပြုသူ၊ ခွင့်နှင့် လစာမူဝါဒ အဆင့် ၇ ခုကို စစ်ဆေးပါ။",
+          "အဆင့်တိုင်းရှိ သတ်မှတ်ချက်ဖွင့်ရန် link မှ ဝင်ပြီး သင့်လုပ်ငန်း၏ တကယ့်အချက်အလက်များကို သိမ်းပါ။ Setup ပြန်သွားရန် link ဖြင့် မူလအဆင့်သို့ ပြန်နိုင်သည်။",
+          "အချက်အလက်မှန်ကြောင်း စစ်ပြီး အတည်ပြု checkbox နှိပ်ကာ စစ်ဆေးချက် သိမ်းပါ။ သတ်မှတ်ချက်ပြောင်းလဲလျှင် သက်ဆိုင်ရာအဆင့်ကို ပြန်စစ်ရန် ပြပါမည်။"
+        ]
+      }
+    },
+    {
+      "id": "branding",
+      "icon": "spark",
+      "href": "/branding-settings",
+      "title": {
+        "en": "Branding and workspace appearance",
+        "my": "Brand နှင့် မျက်နှာပြင်ပုံစံ"
+      },
+      "steps": {
+        "en": [
+          "Set Unlock Your Future or your chosen brand name, tagline, accent color and logo in Branding settings. The shared identity appears in both portals and generated forms.",
+          "Use the account menu for English/Myanmar and light/dark mode. The app launcher is the home screen; use Search, Favorites, Back and Apps Home to move around.",
+          "On a desktop, hover or focus an app to read its capabilities in the detail area on the right. Every app stays visible, without a floating tooltip. Press Esc to clear the details. Use the info button on touch screens."
+        ],
+        "my": [
+          "Branding settings တွင် Unlock Your Future အမည်၊ tagline၊ accent အရောင်နှင့် logo သတ်မှတ်ပါ။ Portal နှစ်ခုနှင့် ထုတ်ပေးသော Form များတွင် Brand တူညီစွာ ပြပါမည်။",
+          "Account menu မှ မြန်မာ/အင်္ဂလိပ် နှင့် အလင်း/အမှောင် ပြောင်းနိုင်သည်။ Apps Home၊ Search၊ Favorites နှင့် Back ကို သုံးပြီး သက်ဆိုင်ရာ App သို့ သွားပါ။",
+          "Desktop တွင် App ကို Mouse တင်ပါ သို့မဟုတ် Keyboard ဖြင့် ရွေးပြီး ညာဘက်တွင် အသေးစိတ် ဖတ်ပါ။ App အားလုံး ဆက်ပေါ်နေပြီး Tooltip မပေါ်ပါ။ အသေးစိတ်ကို ရှင်းရန် Esc နှိပ်ပါ။ ဖုန်းတွင် Info ခလုတ် သုံးပါ။"
+        ]
+      }
+    },
+    {
+      "id": "businesses",
+      "icon": "departments",
+      "href": "/businesses",
+      "title": {
+        "en": "Expense business tags, not employee memberships",
+        "my": "Expense လုပ်ငန်းအမည်များ (ဝန်ထမ်းချိတ်ဆက်မှု မဟုတ်ပါ)"
+      },
+      "steps": {
+        "en": [
+          "Business setup is now the Owner's expense business tag catalog. Add or archive names employees can choose when submitting expense requests; existing requests keep their original codes.",
+          "Employees belong to one HR organization and keep one profile and account. Employee 360 no longer assigns them to individual businesses.",
+          "One payroll per employee and month; there are no salary business-share percentages or cost allocations. Employee expense requests alone carry a chosen business tag."
+        ],
+        "my": [
+          "Business setup ကို ဝန်ထမ်း Expense Request များအတွက် လုပ်ငန်းအမည် ရွေးစရာများ စီမံရန်သာ သုံးပါ။ အမည်အသစ်ထည့်နိုင်ပြီး မသုံးတော့သည့်အမည်ကို Archive လုပ်နိုင်သည်။ ယခင် Request များ၏ Code ကို ထိန်းထားသည်။",
+          "ဝန်ထမ်းအားလုံးသည် HR Organization တစ်ခုတည်းနှင့် သက်ဆိုင်ပြီး တစ်ဦးလျှင် Profile နှင့် Account တစ်ခုစီသာရှိမည်။ Employee 360 မှ Business ခွဲချိတ်ဆက်ရန် မလိုပါ။",
+          "ဝန်ထမ်းတစ်ဦး၏ တစ်လလစာသည် တစ်ခုတည်းဖြစ်ပြီး Business အလိုက် Salary Share သို့မဟုတ် Cost Allocation မရှိပါ။ ဝန်ထမ်းက တင်သော Expense Request တွင်သာ လုပ်ငန်းအမည် ရွေးနိုင်သည်။"
+        ]
+      }
+    },
+    {
+      "id": "accounts",
+      "icon": "users",
+      "href": "/people-access",
+      "title": {
+        "en": "Accounts, privacy and delegated work",
+        "my": "အကောင့်၊ လျှို့ဝှက်ချက်နှင့် လုပ်ပိုင်ခွင့်"
+      },
+      "steps": {
+        "en": [
+          "People & Access lets the Owner choose personal apps, management apps/actions, employee scope and Salary/Bank/Identity fields for each active account. Job titles do not automatically grant access.",
+          "Give each person only the actions they need: View, Create, Edit, Delete, Approve or Pay where available. Select the employees they may manage. Personal-only access is valid.",
+          "New employee accounts use temporary passwords that must be changed on first login. Bulk import returns successful account credentials once and lists failed rows; copy each credential privately before leaving the result."
+        ],
+        "my": [
+          "People & Access တွင် Account တစ်ခုချင်းအတွက် Personal Apps၊ Management App နှင့် လုပ်ဆောင်ခွင့်၊ စီမံနိုင်သောဝန်ထမ်းနှင့် Salary/Bank/Identity သုံးခွင့် ရွေးပါ။ ရာထူးအမည်ကြောင့် အလိုအလျောက် သုံးခွင့် မရပါ။",
+          "လိုအပ်သည့် View၊ Create၊ Edit၊ Delete၊ Approve၊ Pay ခွင့်များကိုသာ ပေးပြီး စီမံနိုင်သောဝန်ထမ်းများကို ရွေးပါ။ Personal Apps သာ ပေးထားနိုင်သည်။",
+          "Account အသစ်၏ ယာယီစကားဝှက်ကို ပထမဝင်ချိန်တွင် ပြောင်းရမည်။ Bulk import ရလဒ်တွင် အောင်မြင်သော Account စကားဝှက်များကို တစ်ကြိမ်ပြပြီး မအောင်မြင်သော row များကို ပြသည်။ ရလဒ်ပိတ်မီ သက်ဆိုင်သူအတွက် သီးသန့် ကူးယူပါ။"
+        ]
+      }
+    },
+    {
+      "id": "expense-routing",
+      "icon": "finance",
+      "href": "/approval-setup",
+      "title": {
+        "en": "Amount-based Expense approval",
+        "my": "ပမာဏအလိုက် Expense အတည်ပြုခြင်း"
+      },
+      "steps": {
+        "en": [
+          "Open Approval Setup → Expense. Choose Amount-based approval. Assign the AGM reviewer, an independent CEO reviewer, and a person with Pay access to record payment. Add independent alternates for their own requests.",
+          "Enter AGM limits for each currency. At or below the limit, the route is AGM → payment. Above it, the route is AGM → CEO → payment. An unlisted currency always requires CEO review. No currency conversion is guessed.",
+          "Preview a requester and amount, then save the policy. The original requested amount chooses the route; an AGM reduction does not remove a required CEO review. Existing requests retain their route and policy version.",
+          "Approval and actual payment are separate. The payment step records currency, final amount, payment date, method and reference; it does not execute a bank transfer. Standard mode keeps the original Department → AGM → COO → payment form route."
+        ],
+        "my": [
+          "Approval Setup → Expense မှ Amount-based approval ရွေးပါ။ AGM၊ AGM နှင့် မတူသော CEO reviewer နှင့် Pay ခွင့်ရှိ ငွေပေးချေမှတ်တမ်းသွင်းမည့်သူ ရွေးပါ။ ၎င်းတို့၏ ကိုယ်ပိုင်တောင်းဆိုမှုအတွက် သီးခြား Alternate ထည့်ပါ။",
+          "Currency တစ်မျိုးစီအတွက် AGM limit ထည့်ပါ။ Limit အတွင်းနှင့် အတိအကျတူလျှင် AGM → ငွေပေးချေမှု ဖြစ်သည်။ ကျော်လျှင် AGM → CEO → ငွေပေးချေမှု ဖြစ်သည်။ မသတ်မှတ်ထားသော currency ကို CEO ဆီ အမြဲတင်ရမည်။ ငွေလဲနှုန်း ခန့်မှန်းမတွက်ပါ။",
+          "တောင်းဆိုသူနှင့် နမူနာပမာဏဖြင့် Preview ကြည့်ပြီး မူဝါဒ သိမ်းပါ။ မူလတောင်းဆိုပမာဏဖြင့် လမ်းကြောင်း သတ်မှတ်သဖြင့် AGM က ပမာဏလျှော့လည်း လိုအပ်သော CEO အဆင့် မပျောက်ပါ။ တင်ပြီးသား Request တွင် မူလလမ်းကြောင်းနှင့် policy version ကို ထိန်းထားသည်။",
+          "အတည်ပြုခြင်းနှင့် ငွေပေးချေခြင်းသည် သီးခြားဖြစ်သည်။ ငွေကြေး၊ တကယ်ပေးသည့်ပမာဏ၊ ရက်၊ နည်းလမ်းနှင့် reference ကို မှတ်တမ်းတင်ရမည်။ ဘဏ်မှ တကယ်ငွေလွှဲခြင်း မလုပ်ပါ။ Standard mode တွင် မူလ ဌာန → AGM → COO → ငွေပေးချေမှု လမ်းကြောင်းကို သုံးသည်။"
+        ]
+      }
+    },
+    {
+      "id": "approvals",
+      "icon": "active",
+      "href": "/approvals",
+      "title": {
+        "en": "Review, conditions and payment",
+        "my": "အတည်ပြုမှု၊ စည်းကမ်းချက်နှင့် ငွေပေးချေမှု"
+      },
+      "steps": {
+        "en": [
+          "Approvals shows requests assigned to you and requests you are permitted to view. Open the original form and attachments before deciding.",
+          "Approve, approve with conditions, or reject with a reason where supported. Expense authorization may reduce the amount but cannot increase the preceding authorized amount. Payment cannot exceed final approval.",
+          "Current permissions and account activity are checked again when acting. Your own request requires an independent reviewer. If someone leaves the team, review pending assignments before disabling their account; saved requests retain their original route."
+        ],
+        "my": [
+          "Approvals တွင် သင့်တာဝန်ကျသော Request နှင့် သင်ကြည့်ခွင့်ရှိသော Request များကို ပြသည်။ မဆုံးဖြတ်မီ မူရင်း Form နှင့် attachment ဖတ်ပါ။",
+          "ခွင့်ပြုခြင်း၊ စည်းကမ်းချက်ဖြင့် ခွင့်ပြုခြင်း သို့မဟုတ် အကြောင်းပြချက်ဖြင့် ငြင်းပယ်ခြင်းကို သက်ဆိုင်ရာ Form အလိုက် လုပ်ပါ။ Expense ပမာဏကို လျှော့နိုင်သော်လည်း ယခင်ခွင့်ပြုပမာဏထက် မတိုးနိုင်ပါ။ တကယ်ပေးငွေသည် နောက်ဆုံးခွင့်ပြုပမာဏထက် မကျော်ရပါ။",
+          "လုပ်ဆောင်ချိန်တိုင်း လက်ရှိသုံးခွင့်နှင့် Account ကို ထပ်စစ်သည်။ ကိုယ်ပိုင်တောင်းဆိုမှုကို သီးခြားသူ အတည်ပြုရမည်။ အတည်ပြုသူတစ်ဦး အလုပ်ထွက်လျှင် Account မပိတ်မီ ကျန် Request တာဝန်များကို စစ်ပါ။ တင်ပြီး Request တွင် မူလတာဝန်ယူသူကို ထိန်းထားသည်။"
+        ]
+      }
+    },
+    {
+      "id": "leave",
+      "icon": "leave",
+      "href": "/leave",
+      "title": {
+        "en": "Leave calendar and entitlement",
+        "my": "ခွင့်ပြက္ခဒိန်နှင့် ခွင့်ရက်သတ်မှတ်မှု"
+      },
+      "steps": {
+        "en": [
+          "Set company working hours, weekly holidays and special dates in Approval Setup → Leave Calendar. Add shifts/daily schedules or weekday rosters as needed.",
+          "In Leave, maintain paid/unpaid categories and yearly entitlement for each employee. Leave balances are independent of job titles and expense business tags.",
+          "Review full-day, half-day or hourly requests using the form’s quoted working time and conditions. Approved leave is retained; the system accounts for configured workdays and overnight shifts."
+        ],
+        "my": [
+          "Approval Setup → Leave Calendar တွင် အလုပ်ချိန်၊ ပုံမှန်ပိတ်ရက်နှင့် အထူးရက်များ သတ်မှတ်ပါ။ လိုအပ်သလို shift၊ နေ့စဉ် schedule နှင့် weekday roster ထည့်ပါ။",
+          "Leave တွင် paid/unpaid အမျိုးအစားနှင့် ဝန်ထမ်းတစ်ဦးစီ၏ နှစ်အလိုက် ခွင့်ရက် သတ်မှတ်ပါ။ ရာထူး သို့မဟုတ် Expense လုပ်ငန်းအမည်က ခွင့်လက်ကျန်ကို မပြောင်းပါ။",
+          "Full-day၊ half-day၊ hourly တောင်းဆိုမှုများကို Form တွက်ပြထားသော အလုပ်ချိန်နှင့် စည်းကမ်းချက်များအရ စစ်ပါ။ အတည်ပြုပြီးခွင့်ကို ထိန်းထားပြီး သတ်မှတ်ထားသည့် အလုပ်ရက်နှင့် ညဆိုင်းကို ထည့်တွက်သည်။"
+        ]
+      }
+    },
+    {
+      "id": "salary",
+      "icon": "payroll",
+      "href": "/payroll",
+      "title": {
+        "en": "Prepare salary and record payment",
+        "my": "လစာပြင်ဆင်ခြင်းနှင့် ပေးချေမှုမှတ်တမ်း"
+      },
+      "steps": {
+        "en": [
+          "Open Payroll, choose month and employee, and prepare the supplied 23-column Salary Template. Enter approved allowances, OT, SSB, tax, loan and unpaid-leave inputs. Review the calculated net salary before saving Pending.",
+          "Export saved salary rows to Excel and review employee payslips. One organization maintains exactly one salary record per employee/month without per-business allocations.",
+          "Record Paid separately with Pay permission. Paid salary is immutable; use a separate adjustment process for corrections. Historical legacy records remain in Saved payroll & settings.",
+          "The template has its own salary formula and does not automatically add a KPI bonus. Legacy payroll preview/save use their documented KPI bonus rule. SSB, tax and loan inputs are entered amounts, not automated statutory filing or bank transfers."
+        ],
+        "my": [
+          "Payroll မှ လနှင့် ဝန်ထမ်းရွေးပြီး ပေးထားသော column ၂၃ ခု Salary Template ဖြင့် ပြင်ဆင်ပါ။ ခွင့်ပြုထားသော allowance၊ OT၊ SSB၊ tax၊ loan နှင့် unpaid leave တန်ဖိုးများ ထည့်ပါ။ Net salary ကို စစ်ပြီး Pending အဖြစ် သိမ်းပါ။",
+          "သိမ်းပြီး လစာများကို Excel ထုတ်ကာ Payslip ကို စစ်ပါ။ Organization တစ်ခုတည်းအောက်တွင် ဝန်ထမ်းတစ်ဦးလျှင် တစ်လ Salary Record တစ်ခုသာရှိပြီး Business အလိုက် လစာမခွဲပါ။",
+          "Pay ခွင့်ဖြင့် Paid ကို သီးခြား မှတ်တမ်းတင်ပါ။ ပေးပြီးလစာကို ပြန်မပြင်နိုင်ပါ။ ပြင်ဆင်ရန်လိုလျှင် တာဝန်ရှိ Payroll သူနှင့် သီးခြားပြင်ဆင်မှတ်တမ်း လုပ်ဆောင်ပါ။ လစာဟောင်းများကို Saved payroll & settings တွင် ကြည့်နိုင်သည်။",
+          "Template သည် ကိုယ်ပိုင် salary formula သုံးပြီး KPI bonus အလိုအလျောက် မပေါင်းပါ။ Legacy payroll သည် ၎င်း၏ စာတမ်းတွင် ဖော်ပြထားသော KPI bonus စည်းမျဉ်းကို သုံးသည်။ SSB၊ tax၊ loan များသည် ထည့်သွင်းသောတန်ဖိုးဖြစ်ပြီး အစိုးရထံ တင်ခြင်းနှင့် ဘဏ်ငွေလွှဲခြင်းကို အလိုအလျောက် မလုပ်ပါ။"
+        ]
+      }
+    },
+    {
+      "id": "recruitment",
+      "icon": "recruitment",
+      "href": "/recruitment",
+      "title": {
+        "en": "Recruitment, JD and attachments",
+        "my": "ဝန်ထမ်းခန့်ခြင်း၊ JD နှင့် ဖိုင်များ"
+      },
+      "steps": {
+        "en": [
+          "Create a job opening with role, job description, required and preferred requirements. Upload supporting JD/requirement files and review extracted text before publishing.",
+          "Publish the reviewed version to Careers, receive applications, review candidates and record interview decisions. Email invitations require configured SMTP and an explicit send action.",
+          "Candidate conversion creates a linked employee/account with protected history. AI assessment is optional assistance; check evidence and keep hiring decisions human."
+        ],
+        "my": [
+          "Job opening ဖန်တီးပြီး role၊ Job Description၊ မဖြစ်မနေလိုအပ်ချက်နှင့် ဦးစားပေးလိုအပ်ချက် ထည့်ပါ။ JD/Requirements ဖိုင်တင်ကာ ထုတ်ယူထားသောစာသား စစ်ပြီးမှ Publish လုပ်ပါ။",
+          "စစ်ပြီး version ကို Careers တွင် Publish လုပ်ကာ လျှောက်လွှာလက်ခံ၊ Candidate စစ်ဆေးပြီး interview ဆုံးဖြတ်ချက် မှတ်တမ်းတင်ပါ။ ဖိတ်ကြား Email ပို့ရန် SMTP သတ်မှတ်ချက်နှင့် ပို့မည်ဟု ခလုတ်နှိပ်ခြင်း လိုသည်။",
+          "Candidate ကို ဝန်ထမ်းအဖြစ် ပြောင်းလျှင် Account နှင့် history ချိတ်ဆက်ဖန်တီးသည်။ AI အကဲဖြတ်ချက်ကို အထောက်အကူအဖြစ်သာ သုံးပြီး အထောက်အထား စစ်ကာ လူက နောက်ဆုံးဆုံးဖြတ်ပါ။"
+        ]
+      }
+    },
+    {
+      "id": "lifecycle",
+      "icon": "handover",
+      "href": "/offboarding",
+      "title": {
+        "en": "Onboarding, offboarding and handover",
+        "my": "အလုပ်ဝင်၊ အလုပ်ထွက်နှင့် လွှဲပြောင်းခြင်း"
+      },
+      "steps": {
+        "en": [
+          "Create onboarding for a new hire and track the assigned checklist. Offboarding creates clearance tasks and an exit handover together.",
+          "Assign a successor. The outgoing employee completes required items; the successor acknowledges current work. Review the submitted version before approving or enter a reason for an authorized waiver.",
+          "Editing handover content clears prior acknowledgment. Completed/waived history is read-only. Final settlement uses the dedicated release action after the required clearance evidence is complete."
+        ],
+        "my": [
+          "အလုပ်ဝင်သူအတွက် Onboarding ဖန်တီးပြီး Checklist တာဝန်များ စောင့်ကြည့်ပါ။ Offboarding ဖန်တီးရာတွင် Clearance task နှင့် Exit handover ကို အတူ ဖန်တီးပေးသည်။",
+          "လွှဲယူသူ ရွေးပါ။ ထွက်ခွာသူက လိုအပ်သော item များ ပြီးအောင်ဖြည့်ပြီး လွှဲယူသူက လက်ရှိအကြောင်းအရာကို လက်ခံကြောင်း အတည်ပြုရမည်။ တင်ပြီး version ကို စစ်ကာ Approve လုပ်ပါ သို့မဟုတ် Waive အကြောင်းပြချက် ထည့်ပါ။",
+          "အကြောင်းအရာပြောင်းလဲလျှင် ယခင်လက်ခံချက်ကို ပြန်ရှင်းသည်။ Completed/Waived history သည် ဖတ်ရန်သာ ဖြစ်သည်။ လိုအပ်သော Clearance evidence ပြည့်မှ Final settlement release သီးခြားလုပ်ဆောင်မှုကို သုံးပါ။"
+        ]
+      }
+    },
+    {
+      "id": "forms",
+      "icon": "documents",
+      "href": "/documents",
+      "title": {
+        "en": "Official HR forms and documents",
+        "my": "တရားဝင် HR Form နှင့် စာရွက်များ"
+      },
+      "steps": {
+        "en": [
+          "Employee information, Leave, Expense, Probation and Warning have their own forms and assigned review routes. Read each original form and keep decisions, conditions and receipt separate.",
+          "Issued documents and reviewed histories are retained. Use the Boss/HR signing sequence where required and share only authorized private downloads.",
+          "Probation and Warning decisions remain human decisions. An employee acknowledgment records receipt, not agreement. Sensitive salary, bank, identity and private HR notes remain permission-controlled."
+        ],
+        "my": [
+          "Employee information၊ Leave၊ Expense၊ Probation နှင့် Warning တို့တွင် ကိုယ်ပိုင် Form နှင့် အတည်ပြုလမ်းကြောင်း ရှိသည်။ မူရင်း Form ဖတ်ပြီး ဆုံးဖြတ်ချက်၊ စည်းကမ်းချက်နှင့် လက်ခံရရှိမှုကို ခွဲမှတ်ပါ။",
+          "ထုတ်ပြီးစာရွက်နှင့် စစ်ဆေးပြီး history ကို ထိန်းထားသည်။ လိုအပ်သည့် Boss/HR လက်မှတ်အစဉ်ကို သုံးပြီး ခွင့်ရှိသူသာ Private download လုပ်ပါ။",
+          "Probation နှင့် Warning အတွက် လူက ဆုံးဖြတ်ရမည်။ ဝန်ထမ်း Acknowledgment သည် လက်ခံရရှိကြောင်းသာဖြစ်ပြီး သဘောတူကြောင်း မဟုတ်ပါ။ လစာ၊ ဘဏ်၊ Identity နှင့် Private HR မှတ်စုများကို သတ်မှတ်သုံးခွင့်ဖြင့်သာ ကြည့်နိုင်သည်။"
+        ]
+      }
+    },
+    {
+      "id": "daily-monthly",
+      "icon": "trend",
+      "href": "/today",
+      "title": {
+        "en": "Daily and monthly operations",
+        "my": "နေ့စဉ်နှင့် လစဉ် လုပ်ဆောင်ရန်"
+      },
+      "steps": {
+        "en": [
+          "Use Today for assigned approvals, upcoming HR follow-ups, document expiry and unpaid expense follow-up within your permissions.",
+          "Use Monthly review to compare consolidated payroll changes and missing salary records. Expense requests and receipts can be reviewed separately by selected business tag, currency and payment status.",
+          "Owner can configure and enable in-app reminders after checking recipients. Review Audit logs when investigating a change. Local notifications require the API server to be running."
+        ],
+        "my": [
+          "Today တွင် သုံးခွင့်အတွင်းရှိ အတည်ပြုရန်၊ HR follow-up၊ စာရွက်သက်တမ်းကုန်နှင့် မပေးချေရသေးသော Expense များကို စောင့်ကြည့်ပါ။",
+          "Monthly review တွင် Organization တစ်ခုလုံး၏ လစာပြောင်းလဲမှုနှင့် မရှိသေးသော လစာများကို စစ်ပါ။ Employee Expense Request များကိုသာ Business Tag၊ Currency၊ ပေးချေမှုအခြေအနေနှင့် Receipt အလိုက် စစ်နိုင်သည်။",
+          "Owner က လက်ခံမည့်သူများစစ်ပြီး In-app reminder ကို သတ်မှတ်ဖွင့်နိုင်သည်။ ပြောင်းလဲမှုတစ်ခု စစ်ဆေးရာတွင် Audit logs သုံးပါ။ Local notification အတွက် API server ဖွင့်ထားရန် လိုသည်။"
+        ]
+      }
+    },
+    {
+      "id": "assistant",
+      "icon": "spark",
+      "href": "/boss/chat",
+      "title": {
+        "en": "HR assistant and boundaries",
+        "my": "HR Assistant အသုံးပြုခြင်း"
+      },
+      "steps": {
+        "en": [
+          "Ask the HR assistant about data you are authorized to use. AI requires the configured model service and should be checked against the original records.",
+          "An action proposal does not execute automatically. Read the action card and explicitly confirm only the intended action.",
+          "This HR system records HR approvals and payments; it does not replace a full accounting ledger, execute bank transfers or decide employment automatically."
+        ],
+        "my": [
+          "သင်သုံးခွင့်ရှိသော HR data အတွက် Assistant ကို မေးနိုင်သည်။ AI အတွက် Model service သတ်မှတ်ချက်လိုပြီး အဖြေကို မူရင်းမှတ်တမ်းနှင့် ပြန်စစ်ပါ။",
+          "Action proposal ပေါ်လာရုံဖြင့် အလိုအလျောက် မလုပ်ဆောင်ပါ။ Action card ကို ဖတ်ကာ ရည်ရွယ်ထားသည့်အရာကိုသာ Confirm လုပ်ပါ။",
+          "ဤစနစ်သည် HR နှင့် ငွေပေးချေမှုကို မှတ်တမ်းတင်သည့်စနစ်ဖြစ်ပြီး Accounting ledger အပြည့်အစုံ၊ ဘဏ်ငွေလွှဲခြင်းနှင့် အလုပ်ခန့်/ထုတ် အလိုအလျောက် ဆုံးဖြတ်ခြင်း မလုပ်ပါ။"
+        ]
+      }
+    }
+  ],
+  "employee": [
+    {
+      "id": "start",
+      "icon": "apps",
+      "href": "/portal",
+      "title": {
+        "en": "Your portal and sign-in",
+        "my": "ကိုယ်ပိုင် Portal နှင့် Login"
+      },
+      "steps": {
+        "en": [
+          "Sign in with your own account and change a temporary password when prompted. Apps Home shows only the apps the Owner has shared with you.",
+          "Click an app to open it. Use Search or Favorites, the Back button and Apps Home. On desktop, point to an app for its notes; on a phone, use the info button.",
+          "Use the account menu for Myanmar/English and light/dark mode. Do not share your login or another person’s private file links."
+        ],
+        "my": [
+          "ကိုယ်ပိုင် Account ဖြင့် Login ဝင်ပြီး ယာယီစကားဝှက် ပြောင်းရန်တောင်းလျှင် ပြောင်းပါ။ Apps Home တွင် Owner ပေးထားသော App များကိုသာ မြင်ရမည်။",
+          "App ကို နှိပ်ပြီးဖွင့်ပါ။ Search၊ Favorites၊ Back နှင့် Apps Home ကို သုံးနိုင်သည်။ Desktop တွင် App အပေါ် pointer ရွှေ့ပြီး မှတ်စုကြည့်ပါ။ ဖုန်းတွင် info ခလုတ် သုံးပါ။",
+          "Account menu မှ မြန်မာ/အင်္ဂလိပ်နှင့် အလင်း/အမှောင် ပြောင်းနိုင်သည်။ Login နှင့် အခြားသူ၏ Private file link များကို မျှဝေပါနှင့်။"
+        ]
+      }
+    },
+    {
+      "id": "profile",
+      "icon": "staff",
+      "href": "/portal/profile",
+      "title": {
+        "en": "Your employee profile",
+        "my": "ကိုယ်ပိုင် ဝန်ထမ်း Profile"
+      },
+      "steps": {
+        "en": [
+          "Open My Profile to review your employee information and authorized Employee 360 sections. Submit the Employee information form when details need review.",
+          "An approved profile is separate from a draft change. Salary, job role and app permissions are managed by authorized management.",
+          "You have one employee account and one monthly salary record in the organization. Business tags only appear when you submit an expense request."
+        ],
+        "my": [
+          "My Profile တွင် ဝန်ထမ်းအချက်အလက်နှင့် ကြည့်ခွင့်ရှိသော Employee 360 အပိုင်းများ စစ်ပါ။ အချက်အလက်ပြင်ရန် Employee information form တင်ပါ။",
+          "အတည်ပြုပြီး Profile နှင့် Draft ပြင်ဆင်မှုသည် သီးခြားဖြစ်သည်။ လစာ၊ ရာထူးနှင့် App သုံးခွင့်ကို ခွင့်ရှိသော Management က သတ်မှတ်သည်။",
+          "Organization တစ်ခုတည်းအောက်တွင် Employee Account တစ်ခုနှင့် တစ်လလစာ Record တစ်ခုသာရှိသည်။ Expense Request တင်သည့်အခါမှသာ Business Tag ကို ရွေးရမည်။"
+        ]
+      }
+    },
+    {
+      "id": "attendance",
+      "icon": "camera",
+      "href": "/portal/checkin",
+      "title": {
+        "en": "Check in, check out and attendance",
+        "my": "Check-in၊ Check-out နှင့် အလုပ်တက်မှတ်တမ်း"
+      },
+      "steps": {
+        "en": [
+          "Use Check-in with the permitted photo/camera method, or your own QR token if available. Choose a permitted shift and supply any required reason.",
+          "Check out after work. A very recent scan has a cooldown; failed QR scans do not consume the token. Ask a manager to correct a stale open attendance record.",
+          "My Attendance shows your records. Workdays and dates use Bangkok time and configured schedules. Overtime requires its separate request and approval."
+        ],
+        "my": [
+          "ခွင့်ပြုထားသော photo/camera နည်းဖြင့် Check-in လုပ်ပါ သို့မဟုတ် ကိုယ်ပိုင် QR token ရှိလျှင် သုံးပါ။ ခွင့်ရှိသည့် shift ရွေးပြီး လိုအပ်သောအကြောင်းပြချက် ဖြည့်ပါ။",
+          "အလုပ်ပြီးလျှင် Check-out လုပ်ပါ။ ဆက်တိုက် Scan မလုပ်ရန် cooldown ရှိပြီး မအောင်မြင်သော QR scan ကြောင့် token မကုန်ပါ။ ယခင် Check-out မလုပ်ရသေးသော မှတ်တမ်းရှိလျှင် Manager ထံ ပြင်ခိုင်းပါ။",
+          "My Attendance တွင် ကိုယ့်မှတ်တမ်း ကြည့်နိုင်သည်။ ရက်စွဲနှင့် အလုပ်ရက်များကို Bangkok အချိန်နှင့် schedule အရတွက်သည်။ OT ကို သီးခြား တောင်းဆိုအတည်ပြုရမည်။"
+        ]
+      }
+    },
+    {
+      "id": "leave",
+      "icon": "leave",
+      "href": "/portal/leaves",
+      "title": {
+        "en": "Request leave and read your balance",
+        "my": "ခွင့်တောင်းခြင်းနှင့် လက်ကျန်ကြည့်ခြင်း"
+      },
+      "steps": {
+        "en": [
+          "Open My Leave and check the category and available balance. Enter the requested dates and full-day/half-day/hourly time when supported.",
+          "Review the calculated leave units, reason and any handover/coverage requirement, then submit. Submitted approval follows the assigned reviewers.",
+          "Read conditions and the final decision. Approval conditions may require acknowledgment. If the balance is missing, ask management to check your yearly entitlement."
+        ],
+        "my": [
+          "My Leave တွင် ခွင့်အမျိုးအစားနှင့် ရနိုင်သောလက်ကျန် စစ်ပါ။ ခွင့်ရက်နှင့် Full-day/Half-day/Hourly အချိန်များကို Form အလိုက် ထည့်ပါ။",
+          "တွက်ပြထားသော ခွင့်ယူနစ်၊ အကြောင်းပြချက်နှင့် လွှဲပြောင်းရန် လိုအပ်ချက်များ စစ်ပြီး တင်ပါ။ သတ်မှတ်ထားသော Reviewer များအတိုင်း အတည်ပြုမှု ဆက်သွားမည်။",
+          "စည်းကမ်းချက်နှင့် နောက်ဆုံးဆုံးဖြတ်ချက် ဖတ်ပါ။ စည်းကမ်းချက် လက်ခံကြောင်း အတည်ပြုရန် လိုနိုင်သည်။ လက်ကျန်မရှိလျှင် Management ကို နှစ်အလိုက် entitlement စစ်ခိုင်းပါ။"
+        ]
+      }
+    },
+    {
+      "id": "expense",
+      "icon": "finance",
+      "href": "/portal/rewards",
+      "title": {
+        "en": "Request an expense",
+        "my": "အသုံးစရိတ် တောင်းဆိုခြင်း"
+      },
+      "steps": {
+        "en": [
+          "Open My Rewards & Claims → Request an expense. Choose the business tag for this employee-submitted expense, then enter category, description, purpose, vendor, dates, method, currency, requested amount and reference budget.",
+          "Attach relevant quotations/receipts (up to five PDF/JPEG/PNG files, 10 MB each). Check the route before submitting. With amount routing, a request over the currency limit or in an unlisted currency requires CEO review.",
+          "Track requested, approved and actually paid amounts separately. A request is not paid merely because it is approved. Read review conditions, payment details and the PDF.",
+          "The budget figure is your declared reference, not reserved company funds. Submitted forms are retained; if a correction is needed, ask the reviewer and submit a corrected new form after rejection."
+        ],
+        "my": [
+          "My Rewards & Claims → Request an expense ဖွင့်ပြီး ဤ Employee Expense အတွက် Business Tag ကို ရွေးပါ။ ထို့နောက် Category၊ အသေးစိတ်၊ ရည်ရွယ်ချက်၊ Vendor၊ ရက်စွဲ၊ နည်းလမ်း၊ Currency၊ တောင်းဆိုငွေနှင့် ရည်ညွှန်း Budget ထည့်ပါ။",
+          "Quotation/Receipt PDF/JPEG/PNG ကို ၅ ဖိုင်အထိ၊ တစ်ဖိုင် 10 MB အများဆုံး တင်နိုင်သည်။ မတင်မီ လမ်းကြောင်းစစ်ပါ။ Amount routing တွင် currency limit ကျော်လျှင် သို့မဟုတ် မသတ်မှတ်ထားသော currency ဖြစ်လျှင် CEO ဆီ တင်ရမည်။",
+          "တောင်းဆိုငွေ၊ အတည်ပြုငွေနှင့် တကယ်ပေးငွေကို ခွဲကြည့်ပါ။ Approve ဖြစ်ရုံဖြင့် ပေးချေပြီး မဟုတ်ပါ။ စည်းကမ်းချက်၊ ငွေပေးချေမှုနှင့် PDF ကို ဖတ်ပါ။",
+          "Budget သည် သင်ထည့်ထားသော ရည်ညွှန်းပမာဏဖြစ်ပြီး ကုမ္ပဏီငွေကို ကြိုတင်သိမ်းယူထားခြင်း မဟုတ်ပါ။ တင်ပြီး Form ကို ထိန်းထားသဖြင့် ပြင်ရန်လိုလျှင် Reviewer ကို ပြောပြီး Rejected ဖြစ်ပြီးမှ မှန်ကန်သော Form အသစ်တင်ပါ။"
+        ]
+      }
+    },
+    {
+      "id": "sops",
+      "icon": "sops",
+      "href": "/portal/sops",
+      "title": {
+        "en": "Daily tasks and proof",
+        "my": "နေ့စဉ်တာဝန်နှင့် အထောက်အထား"
+      },
+      "steps": {
+        "en": [
+          "My Tasks shows all assignments due today and earlier, using the assigned date. Future assignments become visible when due.",
+          "Complete the checklist or provide the required manual report and proof. Submit the task; the refreshed card shows the saved completion.",
+          "Read any saved report and proof. If a task/date is wrong, ask the authorized manager to review the assignment rather than marking work you did not perform as complete."
+        ],
+        "my": [
+          "My Tasks တွင် Assigned date အရ ယနေ့နှင့် ယခင်ရက်က တာဝန်အားလုံး ပြသည်။ အနာဂတ်တာဝန်သည် သက်ဆိုင်ရာရက်ရောက်မှ ပြမည်။",
+          "Checklist ပြီးအောင်လုပ်ပါ သို့မဟုတ် လိုအပ်သော Manual report နှင့် proof ထည့်ပါ။ Submit လုပ်ပြီး Refresh ဖြစ်လာသော card တွင် သိမ်းပြီး Completion ကို ကြည့်ပါ။",
+          "သိမ်းပြီး Report နှင့် proof ကို ဖတ်နိုင်သည်။ တာဝန် သို့မဟုတ် ရက်လွဲနေလျှင် မလုပ်ထားသောအရာကို Completed မလုပ်ဘဲ တာဝန်ရှိသူထံ စစ်ခိုင်းပါ။"
+        ]
+      }
+    },
+    {
+      "id": "payslip",
+      "icon": "payroll",
+      "href": "/portal/payslips",
+      "title": {
+        "en": "Your salary and payslip",
+        "my": "ကိုယ်ပိုင်လစာနှင့် Payslip"
+      },
+      "steps": {
+        "en": [
+          "Open My Payslips to view your saved monthly salary, breakdown and Pending/Paid status. Download the authorized payslip PDF when available.",
+          "The full template separates allowances, overtime, employee deductions and employer contributions. Your salary is consolidated for the whole HR organization, with no per-business split.",
+          "If a value needs clarification, refer to the month and saved payslip when contacting the authorized payroll person. Your portal cannot edit salary or mark payment."
+        ],
+        "my": [
+          "My Payslips တွင် သိမ်းပြီး လစဉ်လစာ၊ အသေးစိတ်နှင့် Pending/Paid status ကြည့်ပါ။ ရနိုင်လျှင် ကိုယ်ပိုင် Payslip PDF ဒေါင်းလုဒ်လုပ်ပါ။",
+          "Template တွင် Allowance၊ OT၊ ဝန်ထမ်းဖြတ်ငွေနှင့် Employer Contribution ကို ခွဲပြသည်။ Organization တစ်ခုလုံးအတွက် တစ်လလစာတစ်ခုသာရှိပြီး Business အလိုက် မခွဲပါ။",
+          "ရှင်းလင်းရန်လိုသောတန်ဖိုးရှိလျှင် သက်ဆိုင်ရာလနှင့် Saved payslip ကို ကိုးကားပြီး တာဝန်ရှိ Payroll သူကို မေးပါ။ Employee Portal မှ လစာပြင်ခြင်းနှင့် Paid မှတ်ခြင်း မလုပ်နိုင်ပါ။"
+        ]
+      }
+    },
+    {
+      "id": "handover",
+      "icon": "handover",
+      "href": "/portal/handover/outgoing",
+      "title": {
+        "en": "Outgoing and incoming handovers",
+        "my": "လွှဲပေးခြင်းနှင့် လွှဲယူခြင်း"
+      },
+      "steps": {
+        "en": [
+          "Open My Handovers for work you need to pass on, or Incoming handovers for work assigned to you as successor.",
+          "The outgoing person fills required items, notes and files, then submits. The successor checks current content and acknowledges completed items.",
+          "Changed content requires a new acknowledgment. Once completed or waived, the saved record becomes read-only. Ask the authorized reviewer if a correction or a new handover is needed."
+        ],
+        "my": [
+          "လွှဲပေးရန် My Handovers သို့မဟုတ် လက်ခံရန် Incoming handovers ဖွင့်ပါ။ လွှဲယူသူအဖြစ် သတ်မှတ်ထားသော အလုပ်များကိုသာ လက်ခံပါ။",
+          "လွှဲပေးသူက လိုအပ်သော item၊ note နှင့် file များ ဖြည့်ကာ Submit လုပ်ပါ။ လွှဲယူသူက လက်ရှိအကြောင်းအရာ စစ်ပြီး Completed item များကို လက်ခံကြောင်း အတည်ပြုပါ။",
+          "အကြောင်းအရာပြောင်းလဲလျှင် ပြန်လက်ခံရန် လိုသည်။ Completed/Waived ဖြစ်ပြီးမှတ်တမ်းသည် ဖတ်ရန်သာ ဖြစ်သည်။ ပြင်ဆင်ရန် သို့မဟုတ် အသစ်လုပ်ရန်လိုလျှင် တာဝန်ရှိသူကို မေးပါ။"
+        ]
+      }
+    },
+    {
+      "id": "forms",
+      "icon": "documents",
+      "href": "/portal/documents",
+      "title": {
+        "en": "Documents, probation and warnings",
+        "my": "စာရွက်၊ Probation နှင့် Warning"
+      },
+      "steps": {
+        "en": [
+          "My Documents contains files you are allowed to access. Download through the app; private links can expire and must not be shared with unrelated people.",
+          "Complete your own probation self-evaluation when invited. Read final feedback and use the available employee response/receipt actions.",
+          "Read an issued Warning and use comment/acknowledgment as offered. Acknowledgment records receipt rather than agreement. Employee Information changes require their own review."
+        ],
+        "my": [
+          "My Documents တွင် သင်ကြည့်ခွင့်ရှိသော ဖိုင်များ ရှိသည်။ App မှ ဒေါင်းလုဒ်လုပ်ပါ။ Private link သက်တမ်းကုန်နိုင်ပြီး မသက်ဆိုင်သူထံ မမျှဝေပါနှင့်။",
+          "ဖိတ်ကြားထားလျှင် ကိုယ်ပိုင် Probation self-evaluation ဖြည့်ပါ။ နောက်ဆုံး Feedback ဖတ်ပြီး ရရှိသော Employee response/receipt ခလုတ်များ သုံးပါ။",
+          "ထုတ်ထားသော Warning ကို ဖတ်ပြီး ရရှိသော comment/acknowledgment ကို သုံးပါ။ လက်ခံရရှိကြောင်း အတည်ပြုခြင်းသည် သဘောတူခြင်း မဟုတ်ပါ။ Employee Information ပြင်ဆင်မှုတွင် ကိုယ်ပိုင်အတည်ပြုလုပ်ငန်းစဉ် ရှိသည်။"
+        ]
+      }
+    },
+    {
+      "id": "notifications",
+      "icon": "bell",
+      "href": "/portal",
+      "title": {
+        "en": "Notifications, voting and delegated approvals",
+        "my": "အသိပေးချက်၊ မဲပေးခြင်းနှင့် တာဝန်ကျအတည်ပြုမှု"
+      },
+      "steps": {
+        "en": [
+          "Use the notification bell to open an assigned action and review the latest status. Read or dismiss your own notifications as appropriate.",
+          "Peer Voting and other personal apps appear only when shared by the Owner. Monthly voting rejects repeat submissions for the same colleague.",
+          "If the Owner delegates review duties, use Approvals and act only on the stage assigned to you. Approval access and payment access are distinct. Your own request needs an independent reviewer."
+        ],
+        "my": [
+          "Notification ခေါင်းလောင်းမှ တာဝန်ကျအရာကို ဖွင့်ပြီး နောက်ဆုံးအခြေအနေ ကြည့်ပါ။ ကိုယ်ပိုင်အသိပေးချက်ကို ဖတ်ပြီး သို့မဟုတ် ပိတ်နိုင်သည်။",
+          "Peer Voting နှင့် Personal App များသည် Owner ပေးထားမှ ပေါ်မည်။ တူညီသောဝန်ထမ်းကို တစ်လအတွင်း ထပ်မဲပေးခြင်း မရပါ။",
+          "Owner က အတည်ပြုတာဝန် ပေးထားလျှင် Approvals တွင် သင့်အဆင့်ကိုသာ ဆုံးဖြတ်ပါ။ Approve နှင့် Pay သုံးခွင့်သည် သီးခြားဖြစ်ပြီး ကိုယ်ပိုင်တောင်းဆိုမှုကို သီးခြားသူက ဆုံးဖြတ်ရမည်။"
+        ]
+      }
+    }
+  ]
+}

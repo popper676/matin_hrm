@@ -1,0 +1,22 @@
+name: lm-hr
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - ./server/.env
+    environment:
+      NODE_ENV: production
+      PORT: 8080
+    ports:
+      - "127.0.0.1:8081:8080"
+    volumes:
+      - lm_hr_uploads:/app/server/uploads
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8080/api/health', r => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+volumes:
+  lm_hr_uploads:

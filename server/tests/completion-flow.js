@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {emptyPolicy} from '../../shared/accessPolicy.js';
+import {EXPENSE_ROUTE_STAGES} from '../../shared/expenseRouting.js';
+import {getBkkDateString} from '../lib/dateUtils.js';
+export async function exerciseCompletion({db,request,rejected,ownerCookie,makeAccount,getCookie,setCookie}){
+ setCookie(ownerCookie);
+ const staff=await makeAccount('COMP-STAFF','Completion staff'),agm=await makeAccount('COMP-AGM','Expense reviewer'),ceo=await makeAccount('COMP-CEO','Executive reviewer'),finance=await makeAccount('COMP-FIN','Payment recorder');
+ for(const [account,actions]of [[agm,['view','approve']],[ceo,['view','approve']],[finance,['view','pay']]])await request('/access/people/'+account.id,'PUT',{version:0,policy:{...emptyPolicy(),scope:'all',modules:{rewards:actions}}});
+ const initial=(await request('/access/expense-routing')).setting;assert.equal(initial.mode,'standard');
+ const config={mode:'amount',limits:{THB:'5000.00'},stages:EXPENSE_ROUTE_STAGES.map(([key,label,action],i)=>({key,label,action,assignee_id:[agm.id,ceo.id,finance.id][i],alternate_id:null}))};
+ const owner=(await db.query('SELECT id FROM sys_users WHERE is_owner')).rows[0].id;config.stages.forEach(s=>{s.alternate_id=owner;});
+ await request('/access/expense-routing','PUT',{config,version:initial.version});
+ await rejected('/access/expense-routing','PUT',{config,version:initial.version},409);
+ const low=await request('/access/expense-routing/preview','POST',{config,requester_id:staff.id,currency:'THB',amount:'5000'});assert.deepEqual(low.stages.map(s=>s.key),['agm','finance']);
+ const high=await request('/access/expense-routing/preview','POST',{config,requester_id:staff.id,currency:'THB',amount:'5000.01'});assert.deepEqual(high.stages.map(s=>s.key),['agm','ceo','finance']);
+ const before=(await request('/owner-setup')).steps.find(s=>s.key==='approvals').fingerprint;
+ const live=(await request('/access/expense-routing')).setting;await request('/access/expense-routing','PUT',{config:{...config,limits:{THB:'6000.00'}},version:live.version});
+ const after=(await request('/owner-setup')).steps.find(s=>s.key==='approvals').fingerprint;assert.notEqual(before,after,'Owner review becomes stale when currency limits change');
+ await request('/auth/login','POST',{username:staff.username,password:'Test-pass-1'});const staffCookie=getCookie();
+ await rejected('/access/expense-routing','GET',undefined,403);
+ const meta=await request('/expense-forms/meta');assert.equal(meta.routing.mode,'amount');assert.equal(meta.workflow_enabled,true);
+ const preview=await request('/expense-forms/preview','POST',{currency:'MMK',amount:'1'});assert.equal(preview.policy.reason,'currency_unconfigured');assert.equal(preview.stages.length,3);assert(preview.stages.every(s=>!('assignee_id' in s)),'Personal preview exposes only reviewer display information');
+ const form=new FormData(),day=getBkkDateString(new Date());for(const [key,value]of Object.entries({submission_key:crypto.randomUUID(),business_unit:meta.business_units[0][0],category:'Office/Admin',description:'Completion API reviewed request',purpose:'Operations',vendor:'Example vendor',expense_date:day,required_payment_date:day,urgency:'Normal',payment_method:'Cash',currency:'THB',requested_amount:'6000',budget_amount:'8000'}))form.append(key,value);
+ const saved=(await request('/expense-forms/submit','POST',form)).reward;assert.equal(saved.form_snapshot.routing.ceo_required,false);const detail=await request('/expense-forms/'+saved.id);assert.deepEqual(detail.approval.stages.map(s=>s.key),['agm','finance']);
+ await request('/auth/login','POST',{username:agm.username,password:'Test-pass-1'});await request('/approvals/'+detail.approval.id+'/decision','POST',{decision:'approve',comment:'Approved within policy',version:detail.approval.version,approved_amount:5000});
+ setCookie(staffCookie);const approved=await request('/expense-forms/'+saved.id);assert.equal(approved.request.status,'APPROVED');assert.equal(approved.approval.stages[approved.approval.current_stage].key,'finance');
+ setCookie(ownerCookie);const current=(await request('/access/expense-routing')).setting;await request('/access/expense-routing','PUT',{config:{mode:'standard',limits:{},stages:[]},version:current.version});
+ assert.equal((await request('/expense-forms/'+saved.id)).request.form_snapshot.routing.mode,'amount','Existing request remains on its saved amount route');
+ setCookie(ownerCookie);
+}
